@@ -240,8 +240,6 @@
 		}
 	}
 
-
-
 	if ($('.supua').length > 0) {
 		$('header.fixed').addClass('support');
 		$('.progress-container').addClass('support');
@@ -270,8 +268,6 @@
 			}
 		});
 	}
-
-
 
 	// 02.08
 
