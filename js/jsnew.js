@@ -25,7 +25,7 @@
 		});
 		$('.slide-prev').click(function (e) {
 			//e.preventDefault(); 
-			$('.casessteps').slick('slickPrev');
+			$('.casessteps').slick('slickGoTo', 0);
 		});
 
 
