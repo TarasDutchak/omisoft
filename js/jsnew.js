@@ -23,7 +23,7 @@
 			//e.preventDefault(); 
 			$('.casessteps').slick('slickNext');
 		});
-		$('.slide-prev').click(function (e) {
+		$(document).on('click', '.slide-prev', function (e) {
 			//e.preventDefault(); 
 			$('.casessteps').slick('slickGoTo', 0);
 		});
