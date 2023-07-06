@@ -23,6 +23,10 @@
 			//e.preventDefault(); 
 			$('.casessteps').slick('slickNext');
 		});
+		$('.backslide').click(function (e) {
+			//e.preventDefault(); 
+			$('.casessteps').slick('slickPrev');
+		});
 		$(document).on('click', '.slide-prev', function (e) {
 			//e.preventDefault(); 
 			$('.casessteps').slick('slickGoTo', 0);

@@ -732,7 +732,46 @@
     display: none;
 }
 
+.stepnumwrap {
+    text-align: center;
+    position: relative;
 
+    .casesstep__title {
+        padding: 0 100px;
+    }
+
+    .backslide {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 130%;
+        letter-spacing: 0.36px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background: url('../images/new/backslide.svg') no-repeat center / 100%;
+            vertical-align: middle;
+            margin-right: 8px;
+            margin-top: -2px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.stepform form .stepgrbtn span.stepprev {
+    cursor: pointer;
+}
 
 @media(max-width:1590.8px) {
     .casesheader h1 {
@@ -1037,6 +1076,12 @@
     .casebox .casebox__left .casesolution .title {
         font-size: 16px;
     }
+
+    .stepnumwrap .casesstep__title {
+        padding-right: 0;
+        text-align: right;
+    }
+
 }
 
 
