@@ -593,3 +593,18 @@ div {
 .darkbg {
     background: #0F0F10;
 }
+
+header.header.header__white .header__chat .header__language span {
+    background: -webkit-gradient(linear,left top,right top,from(#212121),color-stop(30%,#212121),color-stop(40%,#8CFFAC),color-stop(65%,#93FFEB),color-stop(65%,#a1a1a1));
+    background: linear-gradient(to right,#212121,#212121 30%,#8CFFAC 40%,#93FFEB 65%,#a1a1a1 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 330% 100%;
+    background-position: 0%;
+    -webkit-transition: background-position 0.8s ease;
+    transition: background-position 0.8s ease;
+    &:hover {
+        background-position: 100% 0;
+    }
+}

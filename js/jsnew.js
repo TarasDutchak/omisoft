@@ -29,6 +29,7 @@
 		});
 
 
+
 		$('a[data-slide]').click(function (e) {
 			e.preventDefault();
 			var slideno = $(this).data('slide');
@@ -62,6 +63,11 @@
 
 			$('.casessteps').slick("setPosition", 0);
 		});
+
+
+
+
+
 
 
 	});
