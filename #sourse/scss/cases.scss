@@ -1084,6 +1084,31 @@
 
 }
 
+@media(max-width:319.8px) {
+
+    .casebox .casebox__left .casetitlebox .casetitle {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .casebox .casebox__left .casetitlebox .logowrap:after {
+        display: none;
+    }
+
+    .casesheader h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+    .pickindustry .industry p {
+        font-size: 16px;
+    }
+}
 
 
 

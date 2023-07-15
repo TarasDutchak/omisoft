@@ -1,0 +1,182 @@
+@media(max-width:575.8px) {
+    .hupd-benefits__left h2,
+    .postmiansectbody__post h2,
+    .postmiansectbody__post h3,
+    .alsolike h2 {
+        font-size: 28px;
+    }
+
+    .postmiansectbody__post .postgetconsultation p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:375.8px) {
+    .dropusanote.dropusanote__hupd .dropusanotesect__content .descr p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:360.8px) {
+    .benefits__left h2 {
+        font-size: 26px;
+    }
+
+    .hupdbenefit .descr p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:340.8px) {
+
+    .postcontent {
+        padding-top: 0;
+    }
+
+    .postmiansect__descr {
+        padding-right: 0;
+    }
+
+    .postauthor__wrap .postauthor {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .postbox-col:not(.w-100) .postbox .postbox__body-top {
+        padding: 10px 15px 0 15px;
+    }
+
+    .postbox-col:not(.w-100) .postbox .postbox__bottsect {
+        padding: 0 15px 10px 15px;
+    }
+
+    .postreadreview h2 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .postreadreview h2:before {
+        display: none;
+    }
+
+    .service-faq .service-faqrow .service-faqrow__header .faqbtn {
+        right: 5px;
+    }
+
+    .postbox-col.w-100 .postbox .postbox__body {
+        padding: 16px 15px 20px 15px;
+    }
+
+    .postbox-col:not(.w-100) .postbox .postbox__body-top {
+        padding: 16px 15px 0 15px;
+    }
+
+    .postbox-col:not(.w-100) .postbox .postbox__bottsect {
+        padding: 0 15px 20px 15px;
+    }
+
+    .postbox-subscribe.postbox-subscribe__black .postbox-subscribe__descr {
+        background: none;
+    }
+
+    .postbox-subscribe.postbox-subscribe__black .postbox-subscribe__descr p {
+        max-width: 100%;
+    }
+
+
+
+    .postmiansect__descr h1,
+    .alsolike h2,
+    .futuredclients h2,
+    .hupd-benefits__left h2,
+    .service-faq h2,
+    .abussectitle,
+    .devservivessection .abussectitle,
+    .dropusanote.newmain .dropusanotesect__content h2,
+    .lateststories__title,
+    .service-whatwedo.newmain h2,
+    .postmiansectbody__post h2 {
+        font-size: 26px;
+    }
+
+    .hupd-benefits__left h2 {
+        font-size: 24px;
+    }
+
+    .devservivessection.devservivessection__hupd .title {
+        font-size: 15px;
+    }
+
+    .postbox-subscribe .postbox-subscribe__descr p {
+        font-size: 14px;
+    }
+
+    .dropusanote.dropusanote__hupd .dropusanotesect__content .descr p {
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width:320.8px) {
+
+    .hupdbenefit {
+        padding: 14px 10px;
+    }
+
+    .devservivessection.devservivessection__hupd .title {
+        word-wrap: break-word;
+    }
+
+    .dropusanote.dropusanote__hupd .dropusanotesect {
+        padding: 20px 20px 65px 20px;
+    }
+
+    .service-welcomesection .ratedbox img {
+        max-width: 100%;
+    }
+
+
+
+
+
+    .aboutus-welcomesect h1 {
+        font-size: 38px;
+    }
+
+    .welcomesection__title.hupd,
+    .postmiansectbody__post h2,
+    .postmiansect__descr h1,
+    .alsolike h2,
+    .futuredclients h2,
+    .hupd-benefits__left h2,
+    .service-faq h2,
+    .abussectitle,
+    .devservivessection .abussectitle,
+    .dropusanote.newmain .dropusanotesect__content h2,
+    .lateststories__title,
+    .service-whatwedo.newmain h2,
+    .postmiansectbody__post h3,
+    .dropusanote.dropusanote__hupd .dropusanotesect__content h2,
+    .aboutusn-developing h2, .aboutusn-whoweare h2,
+    .futuredclients h2, .hupd-benefits__left h2, .service-faq h2 {
+        font-size: 24px;
+    }
+
+    .hupd-benefits__left h2 {
+        font-size: 21px;
+    }
+
+    .postmiansectbody__post .postgetconsultation p,
+    .service-workin .serviserow__stacksblock .title {
+        font-size: 18px;
+    }
+
+    .devservivessection.devservivessection__hupd .title {
+        font-size: 14px;
+    }
+
+    .hupdbenefit .descr p,
+    .servoperateslider__box .descr {
+        font-size: 12px;
+    }
+}
