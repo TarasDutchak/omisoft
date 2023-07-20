@@ -33,22 +33,28 @@
     }
 
     .visitsite {
-        color: #F4C484;
+        // color: #F4C484;
         font-size: 24px;
         font-weight: 700;
         line-height: 135%;
         position: relative;
         padding-right: 40px;
 
-        &::after {
-            content: '';
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background: url('../images/case/arrow_orange.svg') no-repeat center / 100%;
+        // &::after {
+        //     content: '';
+        //     display: inline-block;
+        //     width: 32px;
+        //     height: 32px;
+        //     position: absolute;
+        //     right: 0;
+        //     top: 0;
+        //     background: url('../images/case/arrow_orange.svg') no-repeat center / 100%;
+        //     transition: 0.3s;
+        // }
+
+        i {
+            margin: -4px 0 0 4px;
+            vertical-align: middle;
             transition: 0.3s;
         }
 
@@ -60,7 +66,7 @@
         }
 
         &:hover {
-            &::after {
+            i {
                 transform: translateX(10px);
             }
         }
