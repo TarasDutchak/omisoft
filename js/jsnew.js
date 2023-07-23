@@ -68,11 +68,115 @@
 			$('.casessteps').slick("setPosition", 0);
 		});
 
-
-		
-		
+		// DEMO 
 
 
+		$('.ouruniswap__slider').slick({
+			infinite: true,
+			slidesToShow: 7,
+			slidesToScroll: 1,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 0,
+			speed: 3500,
+			cssEase: 'linear',
+			pauseOnHover: false,
+			pauseOnFocus: false,
+			swipe: false,
+			responsive: [
+				{
+					breakpoint: 1441,
+					settings: {
+						slidesToShow: 6,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 1301,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 769,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 575,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 401,
+					settings: {
+						slidesToShow: 2.5,
+						slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 361,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+					}
+				},
+			]
+		});
+
+
+		$('.ourpackage_slider').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: false,
+			infinite: false,
+			responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+					adaptiveHeight: true
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					adaptiveHeight: true
+				}
+				// settings: {
+				// 	settings: "unslick"
+				// }
+			},
+			{
+				breakpoint: 575,
+				settings: {
+					slidesToShow: 1.3,
+					adaptiveHeight: true
+				}
+			},
+			{
+				breakpoint: 361,
+				settings: {
+					slidesToShow: 1,
+					adaptiveHeight: true
+				}
+			},
+	
+			]
+		});
 
 
 
