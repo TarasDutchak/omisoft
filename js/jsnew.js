@@ -143,40 +143,84 @@
 			arrows: false,
 			infinite: false,
 			responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 2,
-					adaptiveHeight: true
-				}
-			},
-			{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 1,
-					adaptiveHeight: true
-				}
-				// settings: {
-				// 	settings: "unslick"
-				// }
-			},
-			{
-				breakpoint: 575,
-				settings: {
-					slidesToShow: 1.3,
-					adaptiveHeight: true
-				}
-			},
-			{
-				breakpoint: 361,
-				settings: {
-					slidesToShow: 1,
-					adaptiveHeight: true
-				}
-			},
-	
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 2,
+						adaptiveHeight: true
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+						adaptiveHeight: true
+					}
+					// settings: {
+					// 	settings: "unslick"
+					// }
+				},
+				{
+					breakpoint: 575,
+					settings: {
+						slidesToShow: 1.3,
+						adaptiveHeight: true
+					}
+				},
+				{
+					breakpoint: 361,
+					settings: {
+						slidesToShow: 1,
+						adaptiveHeight: true
+					}
+				},
+
 			]
 		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		var delay = 0,
+			step = 12 / $('.animitam').length; /* 5 is the animation duration */
+		$('.animitam').each(function () {
+			$(this).css('animation-delay', -delay + "s");
+			delay += step;
+		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

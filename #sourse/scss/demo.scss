@@ -1,7 +1,17 @@
 .casemainscreen.demo {
-    padding: 124px 0 64px;
+    // padding: 124px 0 64px;
+    padding: 0;
     font-family: Montserrat;
     overflow: hidden;
+
+    .casemainscreen__left {
+        padding: 140px 0 64px;
+    }
+
+    .casemainscreen__right {
+        padding: 124px 0 64px;
+        position: relative;
+    }
 
     .casemainscreen__left {
         width: 100%;
@@ -17,7 +27,7 @@
 
     .casemainscreen__left {
         padding-right: 8px;
-        padding-top: 16px;
+        // padding-top: 16px;
 
         h1 {
             color: #fff;
@@ -368,6 +378,247 @@
     min-height: 58px;
 }
 
+.casemainscreen.demo .casemainscreen__right .imgwrap {
+    z-index: 2;
+    position: relative;
+}
+
+// .animationsect {
+//     position: absolute;
+//     padding: 0;
+//     top: 0;
+//     left: 15%;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 50%;
+//     animation: circle 6s infinite linear;
+//     z-index: 2;
+// }
+
+// .animpic1 {
+//     position: absolute;
+//     z-index: 1;
+//     top: 0;
+//     left: 50%;
+//     margin-left: -130px;
+//     z-index: 2;
+//     // animation: reverse 6s infinite linear;
+
+// }
+
+
+
+
+
+
+
+//   animationsect
+//   animitam
+
+.casemainscreen.demo .casemainscreen__right .imgwrap {
+    height: 675px;
+}
+
+.animationsect {
+    position: relative;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: calc(100% + 200px);
+    height: 80%;
+}
+
+.animitam {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation:
+        move-x 12s linear infinite,
+        move-y 12s linear infinite;
+
+}
+
+
+
+@keyframes move-x {
+    0% {
+        left: 100%;
+        animation-timing-function: ease-in;
+        z-index: 1;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    25% {
+        left: 50%;
+        animation-timing-function: ease-out;
+        z-index: 1;
+    }
+
+    30% {
+        z-index: 2;
+    }
+
+    50% {
+        left: 0%;
+        animation-timing-function: ease-in;
+        z-index: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    55% {
+        z-index: 2;
+    }
+
+    75% {
+        left: 50%;
+        animation-timing-function: ease-out;
+        z-index: 2;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    100% {
+        left: 100%;
+        animation-timing-function: ease-in;
+        z-index: 2;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes move-y {
+    0% {
+        top: 50%;
+        animation-timing-function: ease-out;
+    }
+
+    25% {
+        top: 0;
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        top: 50%;
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        top: 100%;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        top: 50%;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+@media(max-width:1600.8px) {
+    .casemainscreen.demo .casemainscreen__right .imgwrap {
+        height: 500px;
+    }
+}
+
+@media(max-width:1199.8px) {
+    .casemainscreen.demo .casemainscreen__right .imgwrap {
+        height: 400px;
+    }
+}
+
+@media(max-width:991.8px) {
+
+    .animationsect {
+        width: calc(100% + 100px);
+    }
+
+    @keyframes move-x {
+        0% {
+            left: 100%;
+            animation-timing-function: ease-in;
+            z-index: 1;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+
+        25% {
+            left: 50%;
+            animation-timing-function: ease-out;
+            z-index: 2;
+        }
+
+        30% {
+            z-index: 2;
+        }
+
+        50% {
+            left: 0%;
+            animation-timing-function: ease-in;
+            z-index: 2;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        55% {
+            z-index: 2;
+        }
+
+        75% {
+            left: 50%;
+            animation-timing-function: ease-out;
+            z-index: 2;
+            transform: translate(-50%, -50%) scale(0.7);
+        }
+
+        100% {
+            left: 100%;
+            animation-timing-function: ease-in;
+            z-index: 2;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}
+
+
+@media(max-width:575.8px) {
+    .casemainscreen.demo .casemainscreen__right .imgwrap {
+        height: auto;
+    }
+
+    .animitam {
+        transform: translate(-50%,-50%) scale(0.5) !important;
+    }
+
+    .animationsect {
+        width: 100%;
+    }
+
+    .casemainscreen.demo .casemainscreen__right {
+        padding: 80px 0 40px;
+    }
+
+    .animationsect {
+        top: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media(max-width:1600.8px) {
@@ -388,9 +639,9 @@
         height: 60px;
     }
 
-    .casemainscreen.demo {
-        padding: 90px 0 50px;
-    }
+    // .casemainscreen.demo {
+    //     padding: 90px 0 50px;
+    // }
 
     .casemainscreen.demo .casemainscreen__right {
         img {
@@ -559,9 +810,10 @@
         flex: 0 0 100%;
     }
 
-    .casemainscreen.demo .casemainscreen__right img {
+    .casemainscreen.demo .casemainscreen__right .imgwrap img {
         max-width: 100%;
         width: 100%;
+        max-height: inherit;
     }
 
     .casemainscreen.demo .casemainscreen__right {
@@ -624,9 +876,9 @@
         padding: 0;
     }
 
-    .casemainscreen.demo {
-        padding: 64px 0 0 0;
-    }
+    // .casemainscreen.demo {
+    //     padding: 64px 0 0 0;
+    // }
 
     .casemainscreen.demo .casemainscreen__left .requestlink {
         max-width: 274px;
@@ -755,6 +1007,14 @@
 
     .ourpackage .ourpackage_box {
         min-height: 370px;
+    }
+
+    .launchsect {
+        padding-top: 40px;
+    }
+
+    .casemainscreen.demo .casemainscreen__left {
+        padding-top: 64px;
     }
 }
 
