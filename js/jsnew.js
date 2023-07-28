@@ -54,20 +54,6 @@
 			$('.popup__window').removeClass('active');
 		});
 
-		// tabs
-		$('.tabbtn').click(function (e) {
-			e.preventDefault();
-			$('.tabbtn').removeClass('active');
-			$(this).addClass('active');
-
-			var tabId = $(this).data('tab');
-			$('.tabcontent').removeClass('show');
-			$('#' + tabId).addClass('show');
-
-
-			$('.casessteps').slick("setPosition", 0);
-		});
-
 		// DEMO 
 
 
@@ -209,10 +195,7 @@
 
 
 
-
-
-
-
+	
 
 
 
@@ -231,6 +214,33 @@
 
 	});
 
+
+
+	// tabs
+	$('.tabbtn').click(function (e) {
+		// e.preventDefault();
+		$('.tabbtn').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	$('.tabbtn.btn1').click(function () {
+		$('.tabcontent').addClass('hide');
+		$('.tabcontent.tbcont1').removeClass('hide');
+	});
+
+	$('.tabbtn.btn2').click(function () {
+		$('.tabcontent').addClass('hide');
+		$('.tabcontent.tbcont2').removeClass('hide');
+	});
+	/* <a href="contacts.html#sectab" class="extra-tab">link</a> */
+	document.addEventListener("DOMContentLoaded", function () {
+		if ('#sectab' === window.location.hash) {
+			$('.tabcontent').addClass('hide');
+			$('.tabcontent.tbcont2').removeClass('hide');
+			$('.tabbtn').removeClass('active');
+			$('.tabbtn.btn2').addClass('active');
+		}
+	});
 
 
 

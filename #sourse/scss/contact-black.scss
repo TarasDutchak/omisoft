@@ -135,10 +135,10 @@
         }
 
         .tabcontent {
-            display: none;
+            
 
-            &.show {
-                display: block;
+            &.hide {
+                display: none;
             }
         }
 
@@ -465,6 +465,11 @@ main.pt0 {
 
 
 
+}
+@media(max-width:1500.8px) {
+    .contactsection .sheduleacall {
+        max-width: 48%;
+    }
 }
 
 @media(max-width:1199.8px) {
