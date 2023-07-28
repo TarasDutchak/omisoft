@@ -552,6 +552,13 @@
     display: none;
 }
 
+.business-challenge .business__right .imgwrap {
+    position: relative;
+    direction: rtl;
+    position: sticky;
+    top: 100px;
+}
+
 
 @media(max-width:1300.8px) {
 
