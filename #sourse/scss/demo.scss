@@ -295,6 +295,8 @@
         box-shadow: 2px 4px 40px 0px rgba(143, 0, 179, 0.1);
         text-align: center;
         padding: 80px 64px;
+        display: block;
+        transition: 0.3s;
 
         .imgwrap {
             height: 220px;
@@ -324,7 +326,8 @@
                 margin-bottom: 16px;
             }
 
-            a {
+            a,
+            span {
                 color: #C9FA3D;
                 font-size: 18px;
                 font-weight: 700;
@@ -349,15 +352,20 @@
                 }
 
                 &:hover {
-                    svg {
-                        transform: translateX(5px);
-                    }
-
                     &::after {
                         width: 100%;
                     }
                 }
             }
+        }
+
+        &:hover {
+            box-shadow: 2px 4px 40px 0px rgba(173, 26, 210, 0.40);
+
+             .descrwrap span svg {
+                animation: move-arr 1s ease-in-out infinite;
+            }
+
         }
     }
 
@@ -367,6 +375,28 @@
     }
 
 }
+
+@keyframes move-arr {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
 
 .ourpackage_slider {
     .slick-slide {
@@ -584,7 +614,7 @@
     }
 
     .animitam {
-        transform: translate(-50%,-50%) scale(0.5) !important;
+        transform: translate(-50%, -50%) scale(0.5) !important;
     }
 
     .animationsect {
