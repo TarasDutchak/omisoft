@@ -180,17 +180,7 @@
 			$('.casessteps').slick("setPosition", 0);
 		});
 
-
-
-
-
-
-
-
-
-
-
-
+		// animation case
 		var delay = 0,
 			step = 12 / $('.animitam').length; /* 5 is the animation duration */
 		$('.animitam').each(function () {
@@ -198,16 +188,60 @@
 			delay += step;
 		})
 
+		// service new
+
+		$('.testimonialslider-new').slick({
+			centerMode: true,
+			centerPadding: '400px',
+			slidesToShow: 1,
+			arrows: false,
+			dots: true,
+			arrows: true,
+			nextArrow: '<button type="button" class="slick-next"></button>',
+			prevArrow: '<button type="button" class="slick-prev"></button>',
+			// responsive: [{
+			// 	breakpoint: 1380,
+			// 	settings: {
+			// 		slidesToShow: 2,
+			// 	}
+			// },
+
+
+			// ]
+		});
+
+
+		$('.wwd__tablinks .tabbtn').click(function (e) {
+			// e.preventDefault();
+			$('.tabbtn').parent('li').removeClass('active');
+			$(this).parent('li').addClass('active');
+		});
+
+		// Tech - animation
+		function addActiveClass() {
+			const servtechElement = document.querySelector('.servtech');
+			const elementRect = servtechElement.getBoundingClientRect();
+			const elementTop = elementRect.top;
+			const elementBottom = elementRect.bottom;
+			const windowHeight = window.innerHeight;
+	  
+			// Calculate the tolerance (a percentage of the window height)
+			const tolerance = 0.2; // 20% tolerance
+			const offset = windowHeight * tolerance;
+	  
+			if (elementTop <= windowHeight / 2 + offset && elementBottom >= windowHeight / 2 - offset) {
+			  servtechElement.classList.add('active');
+			} else {
+			  servtechElement.classList.remove('active');
+			}
+		  }
+	  
+		  // Call the function on initial page load and on scroll
+		  window.addEventListener('scroll', addActiveClass);
+		  addActiveClass(); // Call it initially to set the class when the page loads
 
 
 
-
-
-
-
-
-
-	
 
 
 
