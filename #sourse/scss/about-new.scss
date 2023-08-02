@@ -543,7 +543,9 @@
     }
 }
 
-.service-workin.aboutusn .workinslider .slick-track {
+.service-workin.aboutusn .workinslider .slick-track,
+.service-workin.aboutusn .workinsliderserv .slick-track
+ {
     padding-bottom: 180px;
 }
 
@@ -899,9 +901,11 @@
         max-width: 60%;
     }
 
-    .service-workin.aboutusn .workinslider .slick-track {
+    .service-workin.aboutusn .workinslider .slick-track,
+    .service-workin.aboutusn .workinsliderserv .slick-track {
         padding-bottom: 80px;
     }
+    
 
     .service-testimonials.aboutusn .testimonialslider-abus .slick-slide {
         padding-left: 0;

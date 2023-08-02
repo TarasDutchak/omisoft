@@ -199,15 +199,33 @@
 			arrows: true,
 			nextArrow: '<button type="button" class="slick-next"></button>',
 			prevArrow: '<button type="button" class="slick-prev"></button>',
-			// responsive: [{
-			// 	breakpoint: 1380,
-			// 	settings: {
-			// 		slidesToShow: 2,
-			// 	}
-			// },
+			responsive: [{
+				breakpoint: 1801,
+				settings: {
+					centerPadding: '300px',
+				}
+			},
+			{
+				breakpoint: 1301,
+				settings: {
+					centerPadding: '200px',
+				}
+			},
+			{
+				breakpoint: 1200,
+				settings: {
+					centerPadding: '100px',
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					centerPadding: '0',
+				}
+			},
 
 
-			// ]
+			]
 		});
 
 
@@ -224,24 +242,55 @@
 			const elementTop = elementRect.top;
 			const elementBottom = elementRect.bottom;
 			const windowHeight = window.innerHeight;
-	  
+
 			// Calculate the tolerance (a percentage of the window height)
 			const tolerance = 0.2; // 20% tolerance
 			const offset = windowHeight * tolerance;
-	  
+
 			if (elementTop <= windowHeight / 2 + offset && elementBottom >= windowHeight / 2 - offset) {
-			  servtechElement.classList.add('active');
+				servtechElement.classList.add('active');
 			} else {
-			  servtechElement.classList.remove('active');
+				servtechElement.classList.remove('active');
 			}
-		  }
-	  
-		  // Call the function on initial page load and on scroll
-		  window.addEventListener('scroll', addActiveClass);
-		  addActiveClass(); // Call it initially to set the class when the page loads
+		}
+
+		// Call the function on initial page load and on scroll
+		window.addEventListener('scroll', addActiveClass);
+		addActiveClass(); // Call it initially to set the class when the page loads
 
 
-
+		// slider
+		$('.workinsliderserv').slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			arrows: false,
+			infinite: false,
+			responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 575,
+				settings: {
+					slidesToShow: 1.5,
+				}
+			},
+			]
+		});
 
 
 
