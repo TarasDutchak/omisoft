@@ -9,8 +9,8 @@ footer.footer.new {
             }
 
             &:nth-child(2) {
-                flex: 0 0 124px;
-                max-width: 124px;
+                flex: 0 0 288px;
+                max-width: 288px;
             }
 
             &:nth-child(3) {
@@ -19,8 +19,8 @@ footer.footer.new {
             }
 
             &:nth-child(4) {
-                flex: 0 0 173px;
-                max-width: 173px;
+                flex: 0 0 200px;
+                max-width: 200px;
             }
         }
     }
@@ -32,6 +32,12 @@ footer.footer.new {
 
     .footer__box {
         margin-bottom: 12px;
+
+        ul {
+            li {
+                line-height: 130%;
+            }
+        }
     }
 
     .footer__box ul.footer__list li {
@@ -52,10 +58,10 @@ footer.footer.new {
         background: #C9FA3D;
         padding: 12px 21px;
         transition: 0.3s;
-        margin-top: 14px;
+        margin-top: 12px;
 
         &:hover {
-            box-shadow: 0px 8px 20px rgba(67,253,130,0.25), 0px 26px 50px #2f463a;
+            box-shadow: 0px 8px 20px rgba(67, 253, 130, 0.25), 0px 26px 50px #2f463a;
         }
 
         span {
@@ -117,7 +123,22 @@ footer.footer.new {
     }
 }
 
+.footercountry {
+    margin-bottom: 12px;
 
+    .title {
+        margin-bottom: 4px;
+
+        img {
+            vertical-align: middle;
+            margin-top: -3px;
+        }
+    }
+}
+
+footer.footer.new .footer__box+.footer__box {
+    margin-top: 30px;
+}
 
 @media(max-width:1530.8px) {
 
@@ -130,15 +151,16 @@ footer.footer.new {
         max-width: 100%;
     }
 
+
+
+
+
+
+
+
 }
 
-@media(max-width:1199.8px) {
-
-    footer.footer .service-container {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
+@media(max-width:1400.8px) {
     footer.footer .footer__content .footer__row {
         flex-wrap: wrap;
     }
@@ -146,6 +168,30 @@ footer.footer.new {
     footer.footer.new .footer__content .footer__row .footer__col:nth-child(4) {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    footer.footer.new .footer__content .footer__row .footer__col:nth-child(4) {
+        margin-top: 50px;
+    }
+
+    footer.footer.new .footer__box ul.text-img {
+        text-align: center;
+
+        li {
+            margin: 0 30px !important;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+
+}
+
+@media(max-width:1199.8px) {
+
+    footer.footer .service-container {
+        padding-left: 60px;
+        padding-right: 60px;
     }
 
     .footer.footer.new .footer__box ul.footer__list.text-img li {
@@ -162,9 +208,26 @@ footer.footer.new {
         max-width: 300px;
     }
 
-    footer.footer.new .footer__content .footer__row .footer__col:nth-child(4) {
-        margin-top: 20px;
+
+}
+
+@media(max-width:991.8px) {
+
+    footer.footer.new .footer__content .footer__row .footer__col:nth-child(1),
+    footer.footer.new .footer__content .footer__row .footer__col:nth-child(2) {
+        max-width: 50%;
+        flex: 0 0 50%;
     }
+
+    footer.footer.new .footer__content .footer__row .footer__col:nth-child(3) {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-top: 30px;
+    }
+
+
+
+
 }
 
 @media(max-width:767.8px) {
@@ -191,6 +254,10 @@ footer.footer.new {
         margin-bottom: 30px;
     }
 
+    footer.footer.new .footer__content .footer__row .footer__col:nth-child(3) {
+        margin-top: 0;
+    }
+
 }
 
 @media(max-width:575.8px) {
@@ -202,4 +269,57 @@ footer.footer.new {
     .footer.footer.new .footer__box ul.footer__list.text-img li {
         margin-bottom: 30px;
     }
+
+    footer.footer .footer__content {
+        padding-top: 58px;
+    }
+
+    footer.footer.new .footerbtn {
+        margin-bottom: 48px;
+    }
+
+    footer.footer.new .footer__box+.footer__box {
+        margin-top: 48px;
+    }
+
+    footer.footer.new .footer__content .footer__row .footer__col {
+        margin-bottom: 36px;
+    }
+
+    footer.footer.new .footer__content .footer__row .footer__col:nth-child(4) {
+        margin-top: 10px;
+    }
+
+    footer.footer.new .footer__box ul.text-img li {
+        margin: 0 0 32px 0 !important;
+        display: block;
+        text-align: left;
+    }
+
+    footer.footer .footer__bottomsect {
+        margin-top: 18px;
+    }
+
+    footer.footer .footer__bottomsect ul {
+        order: 1;
+    }
+
+    footer.footer .footer__bottomsect>.footrights {
+        order: 3;
+        margin-bottom: 0;
+    }
+
+    footer.footer .footer__bottomsect .footer__bottomsect-center {
+        order: 2;
+        margin-bottom: 16px;
+    }
+
+    footer.footer .footer__bottomsect {
+        padding-bottom: 40px;
+    }
+
+    footer.footer .footer__bottomsect ul {
+        margin-bottom: 24px;
+    }
+
 }
