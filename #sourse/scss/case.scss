@@ -1010,11 +1010,27 @@
 }
 
 
+.business-challenge .business__left .imgwrap {
+    padding-right: 30px;
+}
 
+.business-result .business-result__right .imgwrap {
+    padding-left: 30px;
+}
 
-
-
-
+@media(max-width:991.8px) {
+    .business-challenge .business__left .imgwrap {
+        padding-right: 0;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .business-result .business-result__right .imgwrap {
+        padding-left: 0;
+        text-align: center;
+        padding-top: 10px;
+    }
+}
 
 
 
