@@ -101,8 +101,9 @@
             margin-bottom: 24px;
 
             .logowrap {
-                flex: 0 0 auto;
-                width: 60px;
+                width: 100%;
+                max-width: 80px;
+                flex: 0 0 80px;
                 position: relative;
 
                 &::after {
@@ -124,8 +125,9 @@
             }
 
             .casetitle {
-                flex: 0 0 auto;
-                width: calc(100% - 60px);
+                width: 100%;
+                max-width: calc(100% - 80px);
+                flex: 0 0 calc(100% - 80px);
                 padding-left: 24px;
                 color: #fff;
                 font-size: 32px;
@@ -783,6 +785,20 @@ a.casebox {
 }
 
 
+.flagwrap {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 16px;
+
+    img {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+}
+
 
 
 @media(max-width:1590.8px) {
@@ -950,12 +966,7 @@ a.casebox {
         margin-bottom: 40px;
     }
 
-    .casebox .casebox__left .casetitlebox .logowrap {
-        width: 58px;
-    }
-
     .casebox .casebox__left .casetitlebox .casetitle {
-        width: calc(100% - 58px);
         font-size: 20px;
     }
 
@@ -1093,6 +1104,24 @@ a.casebox {
         padding-right: 0;
         text-align: right;
     }
+
+    .flagwrap {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .casebox .casebox__left .casetitlebox .logowrap {
+        max-width: 65px;
+        flex: 0 0 65px;
+    }
+    .casebox .casebox__left .casetitlebox .casetitle {
+        max-width: calc(100% - 65px);
+        flex: 0 0 calc(100% - 65px);
+        padding-left: 15px;
+    }
+
+    
 
 }
 
