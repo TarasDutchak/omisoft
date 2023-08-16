@@ -236,27 +236,34 @@
 		});
 
 		// Tech - animation
-		function addActiveClass() {
-			const servtechElement = document.querySelector('.servtech');
-			const elementRect = servtechElement.getBoundingClientRect();
-			const elementTop = elementRect.top;
-			const elementBottom = elementRect.bottom;
-			const windowHeight = window.innerHeight;
 
-			// Calculate the tolerance (a percentage of the window height)
-			const tolerance = 0.2; // 20% tolerance
-			const offset = windowHeight * tolerance;
+		// servtech
+		if ($('.servtech').length > 0) {
+			function addActiveClass() {
+				const servtechElement = document.querySelector('.servtech');
+				const elementRect = servtechElement.getBoundingClientRect();
+				const elementTop = elementRect.top;
+				const elementBottom = elementRect.bottom;
+				const windowHeight = window.innerHeight;
 
-			if (elementTop <= windowHeight / 2 + offset && elementBottom >= windowHeight / 2 - offset) {
-				servtechElement.classList.add('active');
-			} else {
-				servtechElement.classList.remove('active');
+				// Calculate the tolerance (a percentage of the window height)
+				const tolerance = 0.2; // 20% tolerance
+				const offset = windowHeight * tolerance;
+
+				if (elementTop <= windowHeight / 2 + offset && elementBottom >= windowHeight / 2 - offset) {
+					servtechElement.classList.add('active');
+				} else {
+					servtechElement.classList.remove('active');
+				}
 			}
+
+			// Call the function on initial page load and on scroll
+			window.addEventListener('scroll', addActiveClass);
+			addActiveClass(); // Call it initially to set the class when the page loads
+
 		}
 
-		// Call the function on initial page load and on scroll
-		window.addEventListener('scroll', addActiveClass);
-		addActiveClass(); // Call it initially to set the class when the page loads
+
 
 
 		// slider
@@ -293,12 +300,27 @@
 		});
 
 
+		// Social select
+		$('.socialnickname__selected').click(function () {
+			$('.socialnickname__list').toggle();
+		});
+
+		$('.socialnickname__list ul li').click(function () {
+			$('.socialnickname__list ul li').removeClass('active');
+			$(this).addClass('active');
+			$('.socialnickname__list').slideUp();
+		});
 
 
+		const liItems = document.querySelectorAll('.socialnickname__list li');
+		const selectedImage = document.querySelector('.socialnickname__selected img');
 
-
-
-
+		liItems.forEach(li => {
+			li.addEventListener('click', () => {
+				const imgSrc = li.querySelector('img').getAttribute('src');
+				selectedImage.setAttribute('src', imgSrc);
+			});
+		});
 
 
 
