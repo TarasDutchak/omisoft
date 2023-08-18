@@ -1382,7 +1382,9 @@
         padding-right: 20px;
     }
 
-
+    .servappbox .appinfowrap .descrwrap .descrbox {
+        padding-right: 15px;
+    }
 
 
 }
@@ -1562,7 +1564,9 @@
         flex: 0 0 70%;
     }
 
-
+    .servappbox .appinfowrap .descrwrap .descrbox {
+        padding-right: 20px;
+    }
 
 
     .servappssect h2,
@@ -1574,6 +1578,10 @@
 }
 
 @media(max-width:575.8px) {
+
+    .servappbox .appinfowrap .descrwrap .descrbox {
+        padding-right: 5px;
+    }
 
     .serviceswelcome {
         padding: 40px 0 120px 0;
