@@ -361,5 +361,134 @@
 
 
 
+	// SERVICES AND SOLUTIONS
+
+
+	$('.ssdescrsect__slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: false,
+		infinite: false,
+		responsive: [{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 2.8,
+			}
+		},
+		{
+			breakpoint: 1100,
+			settings: {
+				slidesToShow: 2.5,
+			}
+		},
+		
+		]
+	});
+
+
+	$('.casessteps').on('afterChange', function (event, slick, currentSlide) {
+		if (currentSlide === 0) {
+			$('.ssstepsprogress').removeClass('act2');
+			$('.ssstepsprogress').removeClass('act3');
+			$('.ssstepsprogress').removeClass('act4');
+			$('.ssstepsprogress').addClass('act1');
+		}
+		if (currentSlide === 1) {
+			$('.ssstepsprogress').removeClass('act1');
+			$('.ssstepsprogress').removeClass('act3');
+			$('.ssstepsprogress').removeClass('act4');
+			$('.ssstepsprogress').addClass('act2');
+		}
+		if (currentSlide === 2) {
+			$('.ssstepsprogress').removeClass('act1');
+			$('.ssstepsprogress').removeClass('act2');
+			$('.ssstepsprogress').removeClass('act4');
+			$('.ssstepsprogress').addClass('act3');
+		}
+		if (currentSlide === 3) {
+			$('.ssstepsprogress').removeClass('act1');
+			$('.ssstepsprogress').removeClass('act2');
+			$('.ssstepsprogress').removeClass('act3');
+			$('.ssstepsprogress').addClass('act4');
+		}
+	});
+
+
+	//   tabs map
+	$('.tabbtn').click(function (e) {
+		e.preventDefault();
+		$('.tabbtn').removeClass('active');
+		$(this).addClass('active');
+
+		var tabId = $(this).data('tab');
+		$('.tabcontent').removeClass('show');
+		$('#' + tabId).addClass('show');
+	});
+
+	$('.maptabs .tabbtn').click(function (e) {
+		e.preventDefault();
+
+		var cId = $(this).data('country');
+		$('.svgcountry').removeClass('active');
+		$('#' + cId).addClass('active');
+	});
+
+	// Provide serv slider
+
+	$('.provideservices__slider').slick({
+		centerMode: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		centerPadding: '400px',
+		arrows: true,
+		dots: true,
+		nextArrow: '<button type="button" class="slick-next"></button>',
+		prevArrow: '<button type="button" class="slick-prev"></button>',
+		responsive: [
+			{
+				breakpoint: 1801,
+				settings: {
+					centerPadding: '300px',
+				}
+			},
+			{
+				breakpoint: 1601,
+				settings: {
+					centerPadding: '185px',
+				}
+			},
+			{
+				breakpoint: 1200,
+				settings: {
+					centerPadding: '100px',
+				}
+			},
+
+		]
+	});
+
+	
+	$('.tagsslider').slick({
+		dots: false,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
+		variableWidth: true,
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 1801,
+				settings: {
+					centerPadding: '300px',
+				}
+			},
+			
+
+		]
+	  });
+		  
+
+
 
 }(jQuery));
