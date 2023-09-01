@@ -395,6 +395,13 @@
 			}
 		},
 
+		{
+			breakpoint: 451,
+			settings: {
+				slidesToShow: 1.15,
+			}
+		},
+
 		]
 	});
 
@@ -496,24 +503,24 @@
 	});
 
 
-	$('.tagsslider').slick({
-		dots: false,
-		infinite: false,
-		speed: 300,
-		slidesToShow: 1,
-		variableWidth: true,
-		arrows: false,
-		responsive: [
-			{
-				breakpoint: 1801,
-				settings: {
-					centerPadding: '300px',
-				}
-			},
+	// $('.tagsslider').slick({
+	// 	dots: false,
+	// 	infinite: false,
+	// 	speed: 300,
+	// 	slidesToShow: 1,
+	// 	variableWidth: true,
+	// 	arrows: false,
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 1801,
+	// 			settings: {
+	// 				centerPadding: '300px',
+	// 			}
+	// 		},
 
 
-		]
-	});
+	// 	]
+	// });
 
 	$('.tabletcountry span').click(function(){
 		$('.tabcontent').removeClass('show');
@@ -535,5 +542,68 @@
 
 	// $('.my-slider').slick('resize');
 
+	// Scroll tags
+	const tagssliders = document.querySelectorAll('.tagsslider');
+	let isMouseDown = false;
+	let startX;
+	let scrollLeft;
+	let touchStartX;
+	
+	tagssliders.forEach((tagsslider) => {
+	  tagsslider.addEventListener('mousedown', (e) => {
+		isMouseDown = true;
+		startX = e.pageX - tagsslider.offsetLeft;
+		scrollLeft = tagsslider.scrollLeft;
+	  });
+	
+	  tagsslider.addEventListener('mouseup', () => {
+		isMouseDown = false;
+		tagsslider.style.cursor = 'grab';
+	  });
+	
+	  tagsslider.addEventListener('mouseleave', () => {
+		isMouseDown = false;
+		tagsslider.style.cursor = 'grab';
+	  });
+	
+	  tagsslider.addEventListener('mousemove', (e) => {
+		if (!isMouseDown) return;
+		e.preventDefault();
+		const x = e.pageX - tagsslider.offsetLeft;
+		const walk = (x - startX) * 2; // Змінна швидкості прокручування
+		tagsslider.scrollLeft = scrollLeft - walk;
+		tagsslider.style.cursor = 'grabbing';
+	  });
+	
+	  tagsslider.addEventListener('touchstart', (e) => {
+		isMouseDown = true;
+		touchStartX = e.touches[0].pageX - tagsslider.offsetLeft;
+		scrollLeft = tagsslider.scrollLeft;
+	  });
+	
+	  tagsslider.addEventListener('touchend', () => {
+		isMouseDown = false;
+		tagsslider.style.cursor = 'grab';
+	  });
+	
+	  tagsslider.addEventListener('touchmove', (e) => {
+		if (!isMouseDown) return;
+		e.preventDefault();
+		const x = e.touches[0].pageX - tagsslider.offsetLeft;
+		const walk = (x - touchStartX) * 2; // Змінна швидкості прокручування
+		tagsslider.scrollLeft = scrollLeft - walk;
+		tagsslider.style.cursor = 'grabbing';
+	  });
+	});
+	
+	// show more
+	$('.succesfully__showmore').click(function(){
+		$(this).toggleClass('open');
+		$(this).parent('.successfully__descr').find('p').toggleClass('alltext');
+	});
+
+	
+
 
 }(jQuery));
+

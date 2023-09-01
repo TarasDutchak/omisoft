@@ -211,7 +211,13 @@
                     <main class="pt0 bgnogrid">
                         <div class="sspage">
                             <section class="sswelcomescreen">
-                                <img class="sswelcomescreen__bg" src="images/ss/sswelcomepic.jpg" alt="bg">
+                                <!-- <img class="sswelcomescreen__bg" src="images/ss/sswelcomepic.jpg" alt="bg"> -->
+
+                                <picture>
+                                    <source srcset="images/ss/welomepic-mob.jpg" media="(max-width: 480px)" />
+                                    <img src="images/ss/sswelcomepic.jpg" alt="img" class="sswelcomescreen__bg">
+                                  </picture>
+
                                 <div class="service-container">
                                     <div class="sswelcomescreen__content">
                                         <h1>
@@ -594,16 +600,17 @@
                                                         business was able to bounce back from COVID and achieve a steady
                                                         monthly revenue.
                                                     </p>
+                                                    <div class="succesfully__showmore">
+                                                        <span class="more">Show more</span>
+                                                        <span class="less">Show less</span>
+                                                        <img src="images/ss/grarr.svg" alt="arrow">
+                                                    </div>
                                                 </div>
                                                 <div class="tagsslider">
-                                                    <div>
-                                                        <span>Product design (UI/UX)</span>
-                                                    </div>
-                                                    <div>
-                                                        <span>CRM development</span>
-                                                    </div>
-                                                    <div>
-                                                        <span>iOS development</span>
+                                                    <div class="content">
+                                                        <a href="#">Product design (UI/UX)</a>
+                                                        <a href="#">CRM development</a>
+                                                        <a href="#">iOS development</a>
                                                     </div>
                                                 </div>
                                                 <div class="successfully__timeprice">
@@ -653,15 +660,20 @@
                                                         blockchain market needs and generate revenue, even during the
                                                         early development stages.
                                                     </p>
+                                                    <div class="succesfully__showmore">
+                                                        <span class="more">Show more</span>
+                                                        <span class="less">Show less</span>
+                                                        <img src="images/ss/grarr.svg" alt="arrow">
+                                                    </div>
                                                 </div>
+
                                                 <div class="tagsslider">
-                                                    <div>
-                                                        <span>DEX development</span>
-                                                    </div>
-                                                    <div>
-                                                        <span>NFT marketplace development</span>
+                                                    <div class="content">
+                                                        <a href="#">DEX development</a>
+                                                        <a href="#">NFT marketplace development</a>
                                                     </div>
                                                 </div>
+
                                                 <div class="successfully__timeprice">
                                                     <div class="successfully__timepricebox">
                                                         <p class="title">1,000+ NFT</p>
@@ -710,19 +722,21 @@
                                                         create an MVP in under 4 months, release it and monetize chatbot
                                                         from the get-go.
                                                     </p>
+                                                    <div class="succesfully__showmore">
+                                                        <span class="more">Show more</span>
+                                                        <span class="less">Show less</span>
+                                                        <img src="images/ss/grarr.svg" alt="arrow">
+                                                    </div>
                                                 </div>
-                                                <div class="tagsslider">
-                                                    <div>
-                                                        <span>AI development</span>
-                                                    </div>
-                                                    <div>
-                                                        <span>Product design (UI/UX)</span>
-                                                    </div>
-                                                    <div>
-                                                        <span>MVP development</span>
-                                                    </div>
 
+                                                <div class="tagsslider">
+                                                    <div class="content">
+                                                        <a href="#">AI development</a>
+                                                        <a href="#">Product design (UI/UX)</a>
+                                                        <a href="#">MVP development</a>
+                                                    </div>
                                                 </div>
+
                                                 <div class="successfully__timeprice">
                                                     <div class="successfully__timepricebox">
                                                         <p class="title">10 major</p>
@@ -2344,8 +2358,6 @@
                             </section>
                         </div>
                     </main>
-
-
 
 
 
