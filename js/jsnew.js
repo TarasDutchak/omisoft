@@ -503,44 +503,13 @@
 	});
 
 
-	// $('.tagsslider').slick({
-	// 	dots: false,
-	// 	infinite: false,
-	// 	speed: 300,
-	// 	slidesToShow: 1,
-	// 	variableWidth: true,
-	// 	arrows: false,
-	// 	responsive: [
-	// 		{
-	// 			breakpoint: 1801,
-	// 			settings: {
-	// 				centerPadding: '300px',
-	// 			}
-	// 		},
-
-
-	// 	]
-	// });
+	
 
 	$('.tabletcountry span').click(function(){
 		$('.tabcontent').removeClass('show');
 	})
 
 
-
-
-	// $('.provideservices__slideinfo .more').click(function(){
-	// 	$(this).next('.provideservlist').toggle();
-	// 	$('.provideservices__slider').slick('resize');
-	// });
-
-
-
-
-
-
-
-	// $('.my-slider').slick('resize');
 
 	// Scroll tags
 	const tagssliders = document.querySelectorAll('.tagsslider');
@@ -601,6 +570,57 @@
 		$(this).toggleClass('open');
 		$(this).parent('.successfully__descr').find('p').toggleClass('alltext');
 	});
+
+	// How we operate
+	$('.operate__slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: false,
+		infinite: false,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2.5,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1.8,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1.1,
+				}
+			},
+
+		]
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 
