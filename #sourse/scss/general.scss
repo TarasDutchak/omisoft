@@ -109,3 +109,79 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
+
+// Breadcrumbs
+
+.breadcrumb {
+    list-style-type: none;
+    margin: 0;
+    padding: 33px 0 0 0;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 16px;
+        color: #fff;
+        font-family: "Montserrat", sans-serif;
+        margin-right: 33px;
+        position: relative;
+        margin-bottom: 10px;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            background: url('../images/services/breadcrumbs-arrow.svg') no-repeat center / 100%;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 0;
+            right: -25px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        a {
+            color: #9D9D9E;
+            transition: 0.3s;
+
+            &:hover {
+                color: #C9FA3D;
+            }
+        }
+
+        &.active a {
+            color: #fff;
+        }
+    }
+
+    &.black {
+        li {
+            color: #9D9D9E;
+
+            a {
+                color: #222;
+
+                &:hover {
+                    color: #C9FA3D;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1440.8px) {
+
+    .breadcrumb li {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+
+
+}
