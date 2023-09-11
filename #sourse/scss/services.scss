@@ -83,6 +83,12 @@
     }
 }
 
+// .serviceswelcome__right {
+//     max-width: 738px;
+//     display: flex;
+//     justify-content: flex-end;
+// }
+
 .servwelinfobox {
     padding: 36px;
     border-radius: 24px;
@@ -91,24 +97,24 @@
     box-shadow: 6px 5px 18px 0px #000;
     text-align: center;
     overflow: hidden;
-    height: 256px;
+    height: 206px;
 
     .title {
         color: #C9FA3D;
-        font-size: 80px;
+        font-size: 56px;
         font-weight: 700;
-        line-height: 120%;
+        line-height: 135%;
     }
 
     .descr {
         color: #FFF;
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 500;
-        line-height: 200%;
+        line-height: 180%;
     }
 
     &.vertlong {
-        height: 584px;
+        height: 514px;
 
         img {
             margin-top: 32px;
@@ -120,7 +126,7 @@
 
     &.horlong {
         margin-top: 16px;
-        height: 312px;
+        height: 292px;
         background: linear-gradient(135deg, #C9FA3D 0%, #4AFF88 100%);
         padding: 24px 36px;
         display: flex;
@@ -131,12 +137,13 @@
     .horlongheader {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
 
         span {
             color: #0F0F10;
-            font-size: 80px;
+            font-size: 56px;
             font-weight: 700;
-            line-height: 120%;
+            line-height: 135%;
             width: 100%;
             max-width: 150px;
             flex: 0 0 150px;
@@ -144,9 +151,9 @@
 
         p {
             color: #0F0F10;
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 500;
-            line-height: 200%;
+            line-height: 180%;
             width: 100%;
             max-width: calc(100% - 150px);
             flex: 0 0 calc(100% - 150px);
@@ -1078,17 +1085,29 @@
     }
 }
 
+.service__col-6.flex-end {
+    display: flex;
+    justify-content: flex-end;
+
+    .serviceswelcome__right {
+        max-width: 738px;
+        padding-top: 70px;
+        width: 100%;
+    }
+}
+
+
 
 
 @media(max-width:1800.8px) {
-    .servwelinfobox .title {
-        font-size: 60px;
-    }
+    // .servwelinfobox .title {
+    //     font-size: 60px;
+    // }
 
-    .servwelinfobox .descr {
-        font-size: 20px;
-        line-height: 160%;
-    }
+    // .servwelinfobox .descr {
+    //     font-size: 20px;
+    //     line-height: 160%;
+    // }
 
     .servwelinfobox .horlongheader p {
         line-height: 170%;
@@ -1134,27 +1153,27 @@
         margin-bottom: 20px;
     }
 
-    .servwelinfobox.vertlong {
-        height: 500px;
-    }
+    // .servwelinfobox.vertlong {
+    //     height: 500px;
+    // }
 
     .serviceswelcome__left p {
         max-width: 550px;
     }
 
-    .servwelinfobox {
-        height: 220px;
-    }
+    // .servwelinfobox {
+    //     height: 220px;
+    // }
 
-    .servwelinfobox .descr,
-    .servwelinfobox .horlongheader p {
-        font-size: 18px;
-        line-height: 160%;
-    }
+    // .servwelinfobox .descr,
+    // .servwelinfobox .horlongheader p {
+    //     font-size: 18px;
+    //     line-height: 160%;
+    // }
 
-    .servwelinfobox.horlong {
-        height: 263px;
-    }
+    // .servwelinfobox.horlong {
+    //     height: 263px;
+    // }
 
     .servappssect {
         padding: 120px 0 280px;
@@ -1303,6 +1322,33 @@
         }
     }
 
+    .service__col-6.flex-end .serviceswelcome__right {
+        padding-top: 0;
+    }
+
+    .servwelinfobox {
+        padding: 30px;
+    }
+
+    .servwelinfobox .descr {
+        font-size: 14px;
+    }
+
+    .servwelinfobox {
+        height: 185px;
+    }
+
+    .servwelinfobox.horlong {
+        height: 240px;
+    }
+
+    .servwelinfobox.vertlong {
+        height: 445px;
+    }
+
+
+
+
 
 
     .servappssect h2 {
@@ -1312,7 +1358,7 @@
 
     .servwelinfobox .title,
     .servwelinfobox .horlongheader span {
-        font-size: 54px;
+        font-size: 48px;
     }
 
     .serviceswelcome,
@@ -1323,6 +1369,10 @@
     .serviceswelcome__left p {
         font-size: 16px;
     }
+
+
+
+
 
 }
 
@@ -1644,7 +1694,9 @@
     }
 
 
-    // MC
+    .mcwrap .servwelinfobox .descr br {
+        display: none;
+    }
 
 
 
@@ -1724,131 +1776,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-// @media(max-width:1300.8px) {
-
-//     .servappssect .servappssect__leftcol,
-//     .servappssect .servappssect__rightcol {
-//         max-width: 100%;
-//         flex: 0 0 100%;
-//     }
-
-//     .servappbox .appinfowrap .imgwrap,
-//     .servappbox .appinfowrap .descrwrap {
-//         max-width: 100%;
-//         flex: 0 0 100%;
-//     }
-
-//     .servappbox .appinfowrap .descrwrap {
-//         padding-left: 0;
-//         padding-top: 25px;
-//     }
-
-//     .descrwrap {
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: center;
-
-//         .descrbox {
-//             max-width: 33.333%;
-//             flex: 0 0 33.333%;
-//         }
-//     }
-
-//     .servappbox {
-//         min-height: initial;
-//     }
-
-//     .servappbox .appinfowrap .imgwrap img {
-//         max-height: 500px;
-//         width: auto;
-//         max-width: 100%;
-//     }
-
-//     .servappbox.vertical {
-//         height: auto;
-//     }
-
-//     .servappbox .title,
-//     .servappbox .appinfowrap .imgwrap {
-//         text-align: center;
-//     }
-
-//     .servappbox.vertical .appinfowrap .title {
-//         max-width: 100%;
-//         flex: 0 0 100%;
-//         width: 100%;
-//     }
-
-//     .vievallcases {
-//         height: 160px;
-//     }
-
-//     .vievallcases {
-//         font-size: 48px;
-//         padding: 10px 50px;
-
-//         span {
-//             text-align: left;
-//         }
-//     }
-
-//     .shareidea__wrap .shareideapic4 {
-//         height: 100%;
-//         right: 0;
-//     }
-
-//     .shareidea__wrap .shareideapic3 {
-//         width: 160px;
-//     }
-
-//     .shareidea__wrap .shareideapic2 {
-//         width: 130px;
-//     }
-
-//     .shareidea__wrap .shareideapic1 {
-//         width: 150px;
-//         top: -70px;
-//     }
-
-//     .servappssect .servappssect__rightcol {
-//         margin-top: 16px;
-//     }
-
-//     .testimonialslider-new .slick-next.slick-arrow {
-//         right: 130px;
-//     }
-
-//     .testimonialslider-new .slick-prev.slick-arrow {
-//         left: 130px;
-//     }
-
-//     .wwd__tabs .wwd__tabcontents {
-//         padding-left: 50px;
-//     }
-
-//     .wwd__tabs {
-//         padding: 50px 30px 50px 70px;
-//     }
-
-//     .techrow .techrow__percent {
-//         padding-right: 20px;
-//     }
-
-//     .servappbox .appinfowrap .descrwrap .descrbox {
-//         padding-right: 15px;
-//     }
-
-// }
-
 @media(max-width:1199.8px) {
     // .serviceswelcome .service__col-6 {
     //     max-width: 100%;
@@ -1912,7 +1839,10 @@
     }
 
 
-
+    .mcwrap .servwelinfobox .descr,
+    .mcwrap .servwelinfobox .horlongheader p {
+        font-size: 14px;
+    }
 
 
 
@@ -2281,6 +2211,10 @@
         padding-right: 20px;
     }
 
+    .mcwrap .servwelinfobox .descr,
+    .mcwrap .servwelinfobox .horlongheader p {
+        font-size: 18px;
+    }
 
     .servappssect h2,
     .service-testimonials.ns h3,
@@ -2965,5 +2899,22 @@
     .howweoperate h2 br {
         display: none;
     }
-}
 
+    .slinfwrap .slinfwrap.mobshow .servwelinfobox .descr,
+    .mcwrap .servwelinfobox .horlongheader p {
+        font-size: 16px;
+    }
+
+    .servwelinfobox .horlongheader span {
+        max-width: 110px;
+    }
+
+    .servwelinfobox .horlongheader p {
+        max-width: calc(100% - 110px);
+        flex: 0 0 calc(100% - 110px);
+    }
+
+    .servwelinfobox.horlong {
+        padding: 24px;
+    }
+}
