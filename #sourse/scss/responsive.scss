@@ -894,8 +894,11 @@
         width: 100%;
         max-width: 327px;
         min-height: 52px;
-        background: #C9FA3D;
-        color: #0F0F10;
+        background: #0F0F10;
+        // background: #C9FA3D;
+        color: #C9FA3D;
+
+        border: 1px solid #C9FA3D;
         letter-spacing: 0.05em;
         font-weight: 700;
         font-size: 16px;

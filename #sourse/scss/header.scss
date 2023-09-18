@@ -186,9 +186,14 @@ header.header {
         a {
             position: relative;
             display: inline-block;
-            background: #C9FA3D;
+            background: #0F0F10;
+            border: 1px solid #C9FA3D;
             padding: 12px 21px;
             transition: 0.3s;
+            
+            span {
+                color: #C9FA3D;
+            }
 
             &:hover {
                 box-shadow: 0px 8px 20px rgb(67 253 130 / 25%), 0px 26px 50px #2f463a;
@@ -244,9 +249,6 @@ header.header.header__white {
 
         a {
             color: #212121;
-
-          
-
         }
 
         &>a {
@@ -267,12 +269,12 @@ header.header.header__white {
 
     .header__chat {
         span {
-            color: #212121;
+            color: #C9FA3D;
         }
 
         svg {
             path {
-                stroke: #212121;
+                stroke: #C9FA3D;
             }
         }
     }

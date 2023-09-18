@@ -83,11 +83,34 @@
     }
 }
 
-// .serviceswelcome__right {
-//     max-width: 738px;
-//     display: flex;
-//     justify-content: flex-end;
-// }
+.serviceswelcome.lightblue {
+    .serviceswelcome__left h1 span {
+        background: linear-gradient(180deg, #CDFFCF 0%, #A6E9FF 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .servwelinfobox .title {
+        color: #fff;
+    }
+
+    .servwelinfobox.horlong {
+        background: linear-gradient(180deg, #CDFFCF 0%, #A6E9FF 100%);
+        box-shadow: 6px 5px 18px 0px #000;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .servwelinfobox {
     padding: 36px;
@@ -901,7 +924,82 @@
         transform: translateX(100%);
     }
 
-    &.v1 {
+    &.v100 {
+        .techrow__percent {
+            width: 100%;
+            max-width: 80%;
+            flex: 0 0 80%;
+        }
+
+        .techrow__line {
+            width: 100%;
+            max-width: 20%;
+            flex: 0 0 20%;
+
+        }
+    }
+
+    &.v90 {
+        .techrow__percent {
+            width: 100%;
+            max-width: 75%;
+            flex: 0 0 75%;
+        }
+
+        .techrow__line {
+            width: 100%;
+            max-width: 35%;
+            flex: 0 0 35%;
+
+        }
+    }
+
+    &.v80 {
+        .techrow__percent {
+            width: 100%;
+            max-width: 70%;
+            flex: 0 0 70%;
+        }
+
+        .techrow__line {
+            width: 100%;
+            max-width: 30%;
+            flex: 0 0 30%;
+
+        }
+    }
+
+    &.v70 {
+        .techrow__percent {
+            width: 100%;
+            max-width: 65%;
+            flex: 0 0 65%;
+        }
+
+        .techrow__line {
+            width: 100%;
+            max-width: 35%;
+            flex: 0 0 35%;
+
+        }
+    }
+
+    &.v60 {
+        .techrow__percent {
+            width: 100%;
+            max-width: 60%;
+            flex: 0 0 60%;
+        }
+
+        .techrow__line {
+            width: 100%;
+            max-width: 40%;
+            flex: 0 0 40%;
+
+        }
+    }
+
+    &.v50 {
         .techrow__percent {
             width: 100%;
             max-width: 50%;
@@ -916,32 +1014,62 @@
         }
     }
 
-    &.v2 {
+    &.v40 {
         .techrow__percent {
             width: 100%;
-            max-width: 28%;
-            flex: 0 0 28%;
+            max-width: 45%;
+            flex: 0 0 45%;
         }
 
         .techrow__line {
             width: 100%;
-            max-width: 72%;
-            flex: 0 0 72%;
+            max-width: 55%;
+            flex: 0 0 55%;
 
         }
     }
 
-    &.v3 {
+    &.v30 {
         .techrow__percent {
             width: 100%;
-            max-width: 17%;
-            flex: 0 0 17%;
+            max-width: 35%;
+            flex: 0 0 35%;
         }
 
         .techrow__line {
             width: 100%;
-            max-width: 83%;
-            flex: 0 0 83%;
+            max-width: 65%;
+            flex: 0 0 65%;
+
+        }
+    }
+
+    &.v20 {
+        .techrow__percent {
+            width: 100%;
+            max-width: 30%;
+            flex: 0 0 30%;
+        }
+
+        .techrow__line {
+            width: 100%;
+            max-width: 70%;
+            flex: 0 0 70%;
+
+        }
+    }
+
+    &.v10 {
+        .techrow__percent {
+            width: 100%;
+            max-width: 20%;
+            flex: 0 0 20%;
+        }
+
+        .techrow__line {
+            width: 100%;
+            max-width: 80%;
+            flex: 0 0 80%;
 
         }
     }
@@ -2187,25 +2315,139 @@
         padding-top: 30px;
     }
 
-    .techrow.v2 .techrow__percent {
-        max-width: 40%;
-        flex: 0 0 40%;
+    .techrow .techrow__line .title {
+        font-size: 18px;
     }
 
-    .techrow.v2 .techrow__line {
-        max-width: 60%;
-        flex: 0 0 60%;
+    .techrow.v100 {
+        .techrow__percent {
+            max-width: 60%;
+            flex: 0 0 60%;
+        }
+
+        .techrow__line {
+            max-width: 40%;
+            flex: 0 0 40%;
+        }
     }
 
-    .techrow.v3 .techrow__percent {
-        max-width: 30%;
-        flex: 0 0 30%;
+    .techrow.v90 {
+        .techrow__percent {
+            max-width: 55%;
+            flex: 0 0 55%;
+        }
+
+        .techrow__line {
+            max-width: 45%;
+            flex: 0 0 45%;
+        }
     }
 
-    .techrow.v3 .techrow__line {
-        max-width: 70%;
-        flex: 0 0 70%;
+    .techrow.v80 {
+        .techrow__percent {
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+
+        .techrow__line {
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
     }
+
+    .techrow.v70 {
+        .techrow__percent {
+            max-width: 47%;
+            flex: 0 0 47%;
+        }
+
+        .techrow__line {
+            max-width: 53%;
+            flex: 0 0 53%;
+        }
+    }
+
+    .techrow.v60 {
+        .techrow__percent {
+            max-width: 45%;
+            flex: 0 0 45%;
+        }
+
+        .techrow__line {
+            max-width: 55%;
+            flex: 0 0 55%;
+        }
+    }
+
+    .techrow.v50 {
+        .techrow__percent {
+            max-width: 43%;
+            flex: 0 0 43%;
+        }
+
+        .techrow__line {
+            max-width: 57%;
+            flex: 0 0 57%;
+        }
+    }
+
+    .techrow.v40 {
+        .techrow__percent {
+            max-width: 40%;
+            flex: 0 0 40%;
+        }
+
+        .techrow__line {
+            max-width: 60%;
+            flex: 0 0 60%;
+        }
+    }
+
+    .techrow.v30 {
+        .techrow__percent {
+            max-width: 37%;
+            flex: 0 0 37%;
+        }
+
+        .techrow__line {
+            max-width: 63%;
+            flex: 0 0 63%;
+        }
+    }
+
+    .techrow.v20 {
+        .techrow__percent {
+            max-width: 35%;
+            flex: 0 0 35%;
+        }
+
+        .techrow__line {
+            max-width: 65%;
+            flex: 0 0 65%;
+        }
+    }
+
+    .techrow.v10 {
+        .techrow__percent {
+            max-width: 33%;
+            flex: 0 0 33%;
+        }
+
+        .techrow__line {
+            max-width: 67%;
+            flex: 0 0 67%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
     .servappbox .appinfowrap .descrwrap .descrbox {
         padding-right: 20px;
@@ -2653,9 +2895,27 @@
         }
     }
 
+    .techrow .techrow__line .title {
+        font-size: 14px;
+    }
 
+    .techrow.v100,
+    .techrow.v90,
+    .techrow.v80,
+    .techrow.v70,
+    .techrow.v60,
+    .techrow.v50 {
 
+        .techrow__percent {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
 
+        .techrow__line {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+    }
 
 
 
@@ -2917,6 +3177,9 @@
     .servwelinfobox.horlong {
         padding: 24px;
     }
+    
+
+
 }
 
 .popup__window {
@@ -3004,6 +3267,11 @@
     &:hover {
         box-shadow: 0px 4px 13px rgba(67, 253, 130, 0.25), 0px 16px 30px #2f463a;
     }
+
+
+
+
+
 }
 
 @media(max-width:991.8px) {
@@ -3032,6 +3300,14 @@
     .typopup .tywrap .descr {
         font-size: 14px;
         font-weight: 500;
+        line-height: 160%;
+    }
+
+    .servwelinfobox.vertlong img {
+        max-height: 120px;
+    }
+
+    .servwelinfobox .descr {
         line-height: 160%;
     }
 }
