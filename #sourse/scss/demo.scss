@@ -23,6 +23,10 @@
         width: 100%;
         max-width: 52%;
         flex: 0 0 52%;
+
+        .imgwrap img {
+            width: 1063px;
+        }
     }
 
     .casemainscreen__left {
@@ -677,6 +681,11 @@
         img {
             max-width: calc(100% + 150px);
         }
+    }
+
+    .casemainscreen.demo .casemainscreen__right .imgwrap img {
+        width: auto;
+        max-width: calc(100% + 150px);
     }
 
     .launchsect h2,
