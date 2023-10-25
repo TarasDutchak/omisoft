@@ -602,9 +602,15 @@
 
 
 
+	// footer-submenu
+
+	$('.footer-sublink > a').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('rotate');
+		$(this).next('ul').slideToggle();
 
 
-
+	});
 
 
 
