@@ -503,9 +503,9 @@
 	});
 
 
-	
 
-	$('.tabletcountry span').click(function(){
+
+	$('.tabletcountry span').click(function () {
 		$('.tabcontent').removeClass('show');
 	})
 
@@ -517,56 +517,56 @@
 	let startX;
 	let scrollLeft;
 	let touchStartX;
-	
+
 	tagssliders.forEach((tagsslider) => {
-	  tagsslider.addEventListener('mousedown', (e) => {
-		isMouseDown = true;
-		startX = e.pageX - tagsslider.offsetLeft;
-		scrollLeft = tagsslider.scrollLeft;
-	  });
-	
-	  tagsslider.addEventListener('mouseup', () => {
-		isMouseDown = false;
-		tagsslider.style.cursor = 'grab';
-	  });
-	
-	  tagsslider.addEventListener('mouseleave', () => {
-		isMouseDown = false;
-		tagsslider.style.cursor = 'grab';
-	  });
-	
-	  tagsslider.addEventListener('mousemove', (e) => {
-		if (!isMouseDown) return;
-		e.preventDefault();
-		const x = e.pageX - tagsslider.offsetLeft;
-		const walk = (x - startX) * 2; // Змінна швидкості прокручування
-		tagsslider.scrollLeft = scrollLeft - walk;
-		tagsslider.style.cursor = 'grabbing';
-	  });
-	
-	  tagsslider.addEventListener('touchstart', (e) => {
-		isMouseDown = true;
-		touchStartX = e.touches[0].pageX - tagsslider.offsetLeft;
-		scrollLeft = tagsslider.scrollLeft;
-	  });
-	
-	  tagsslider.addEventListener('touchend', () => {
-		isMouseDown = false;
-		tagsslider.style.cursor = 'grab';
-	  });
-	
-	  tagsslider.addEventListener('touchmove', (e) => {
-		if (!isMouseDown) return;
-		e.preventDefault();
-		const x = e.touches[0].pageX - tagsslider.offsetLeft;
-		const walk = (x - touchStartX) * 2; // Змінна швидкості прокручування
-		tagsslider.scrollLeft = scrollLeft - walk;
-		tagsslider.style.cursor = 'grabbing';
-	  });
+		tagsslider.addEventListener('mousedown', (e) => {
+			isMouseDown = true;
+			startX = e.pageX - tagsslider.offsetLeft;
+			scrollLeft = tagsslider.scrollLeft;
+		});
+
+		tagsslider.addEventListener('mouseup', () => {
+			isMouseDown = false;
+			tagsslider.style.cursor = 'grab';
+		});
+
+		tagsslider.addEventListener('mouseleave', () => {
+			isMouseDown = false;
+			tagsslider.style.cursor = 'grab';
+		});
+
+		tagsslider.addEventListener('mousemove', (e) => {
+			if (!isMouseDown) return;
+			e.preventDefault();
+			const x = e.pageX - tagsslider.offsetLeft;
+			const walk = (x - startX) * 2; // Змінна швидкості прокручування
+			tagsslider.scrollLeft = scrollLeft - walk;
+			tagsslider.style.cursor = 'grabbing';
+		});
+
+		tagsslider.addEventListener('touchstart', (e) => {
+			isMouseDown = true;
+			touchStartX = e.touches[0].pageX - tagsslider.offsetLeft;
+			scrollLeft = tagsslider.scrollLeft;
+		});
+
+		tagsslider.addEventListener('touchend', () => {
+			isMouseDown = false;
+			tagsslider.style.cursor = 'grab';
+		});
+
+		tagsslider.addEventListener('touchmove', (e) => {
+			if (!isMouseDown) return;
+			e.preventDefault();
+			const x = e.touches[0].pageX - tagsslider.offsetLeft;
+			const walk = (x - touchStartX) * 2; // Змінна швидкості прокручування
+			tagsslider.scrollLeft = scrollLeft - walk;
+			tagsslider.style.cursor = 'grabbing';
+		});
 	});
-	
+
 	// show more
-	$('.succesfully__showmore').click(function(){
+	$('.succesfully__showmore').click(function () {
 		$(this).toggleClass('open');
 		$(this).parent('.successfully__descr').find('p').toggleClass('alltext');
 	});
@@ -604,7 +604,7 @@
 
 	// footer-submenu
 
-	$('.footer-sublink > a').click(function(e){
+	$('.footer-sublink > a').click(function (e) {
 		e.preventDefault();
 		$(this).toggleClass('rotate');
 		$(this).next('ul').slideToggle();
@@ -613,22 +613,20 @@
 	});
 
 
+	// menu baners slider
+
+	$('.menuslidersect').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		arrows: false,
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		speed: 600,
+	});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 
 
 }(jQuery));
