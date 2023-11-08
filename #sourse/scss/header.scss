@@ -575,6 +575,7 @@ header.header.header__white .header__chat .header__language span {
 
 // baner header
 
+
 .menuslidersect {
     max-width: 360px;
     margin: 0 auto;
@@ -628,22 +629,13 @@ header.header.header__white .header__chat .header__language span {
         object-fit: cover;
         object-position: 50% 50%;
         transition: 0.5s;
-    }
-
-    .defauld {
-        z-index: 1;
-    }
-
-    .hover {
-        z-index: 2;
-        transform: scale(0.95);
-        opacity: 0;
+        transform: scale(1.01);
     }
 
     &:hover {
 
-        .hover {
-            transform: scale(1.01);
+       img {
+            transform: scale(1.08);
             opacity: 1;
         }
     }
