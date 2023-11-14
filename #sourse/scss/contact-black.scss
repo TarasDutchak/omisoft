@@ -28,7 +28,7 @@
             margin: 0 0 184px 0;
 
             li {
-                margin-bottom: 35px;
+                margin-bottom: 45px;
                 position: relative;
                 padding-left: 80px;
 
@@ -68,7 +68,7 @@
                 &.telli {
                     &::before {
                         background: url('../images/contacts/contact-tel.svg') no-repeat center / 100%;
-                        top: 0;
+                        top: -12px;
                     }
                 }
 
@@ -609,7 +609,7 @@ main.pt0 {
         }
 
         .tglink {
-            margin-bottom: 35px;
+            margin-bottom: 45px;
             font-size: 18px;
             font-weight: 400;
             padding-left: 80px;
@@ -793,5 +793,8 @@ main.pt0 {
         max-width: 100%;
     }
 
+    .contactsection .contactsection__left .contactsection__list li.telli:before {
+        top: -5px;
+    }
 
 }
