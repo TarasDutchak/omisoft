@@ -831,6 +831,10 @@
     }
 }
 
+.section-subtitle {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .servtech {
     padding: 100px 0 64px;
     background: url('../images/services/bgtech.png') no-repeat center / 100%;
@@ -1272,443 +1276,630 @@
 
 @media(max-width:1600.8px) {
 
-    .serviceswelcome__left h1 {
-        font-size: 54px;
-        margin-bottom: 20px;
+    // 1 екран
+
+    .serviceswelcome {
+        padding: 64px 0 124px 0;
+
+        .serviserow {
+            align-items: center;
+        }
     }
 
-    .serviceswelcome__left p {
-        margin-bottom: 20px;
+    .serviceswelcome__left {
+        max-width: 560px;
+
+        h1 {
+            font-size: 56px;
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 180%;
+            margin-bottom: 32px;
+        }
     }
 
-    // .servwelinfobox.vertlong {
-    //     height: 500px;
-    // }
+    .serviceswelcome__right {
+        text-align: right;
 
-    .serviceswelcome__left p {
-        max-width: 550px;
+        &>.slinfwrap {
+            max-width: 646px;
+            display: inline-flex;
+        }
     }
 
-    // .servwelinfobox {
-    //     height: 220px;
-    // }
+    .slinfwrap .slinf {
+        max-width: 41%;
+        flex: 0 0 41%;
+    }
 
-    // .servwelinfobox .descr,
-    // .servwelinfobox .horlongheader p {
-    //     font-size: 18px;
-    //     line-height: 160%;
-    // }
+    .slinfwrap .srinf {
+        max-width: 59%;
+        flex: 0 0 59%;
+    }
 
-    // .servwelinfobox.horlong {
-    //     height: 263px;
-    // }
+    .servwelinfobox {
+        padding: 24px 15px;
+        height: 160px;
 
+        .title {
+            font-size: 50px;
+        }
+
+        .descr {
+            font-size: 14px;
+            line-height: 160%;
+        }
+
+    }
+
+    .servwelinfobox.horlong {
+        height: 226px;
+        padding: 16px 24px 8px 24px;
+    }
+
+    .servwelinfobox .horlongheader span {
+        font-size: 50px;
+        text-align: left;
+        max-width: 120px;
+    }
+
+    .servwelinfobox .horlongheader p {
+        font-size: 14px;
+    }
+
+    .servwelinfobox.vertlong {
+        padding: 36px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 403px;
+
+        img {
+            margin: 0 auto;
+            max-width: 165px;
+        }
+
+        .title {
+            font-size: 50px;
+        }
+    }
+
+    // 2 екран (слайдер)
+
+    .hupd-clientfutured.services {
+        padding: 56px 0;
+
+        .hupd-clientfutured__left {
+
+            max-width: 334px;
+            flex: 0 0 334px;
+
+            p {
+                font-size: 24px;
+            }
+        }
+
+        .hupd-clientfutured__right {
+            max-width: calc(100% - 334px);
+            flex: 0 0 calc(100% - 334px);
+        }
+    }
+
+    .clientfutured__imgs .slick-slide {
+        height: 56px;
+    }
+
+    // 3 екран (our works)
     .servappssect {
-        padding: 120px 0 280px;
+        padding: 124px 0 200px 0;
+    }
+
+    .servappssect .servappssect__rightcol {
+        max-width: 29%;
+        flex: 0 0 29%;
+    }
+
+    .servappssect .servappssect__leftcol {
+        max-width: 71%;
+        flex: 0 0 71%;
+    }
+
+    .servappbox.vertical {
+        padding: 48px 64px;
+        height: 668px;
+
+        .appinfowrap .imgwrap {
+            margin-bottom: 24px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .appinfowrap .descrwrap .descrbox {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .descrbox__title {
+                font-size: 24px;
+                margin-bottom: 4px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 180%;
+                margin-bottom: 0;
+            }
+        }
     }
 
     .servappbox {
-        padding: 40px 50px 20px;
-        height: auto;
-        min-height: 530px;
+        padding: 32px 64px;
+        height: 426px;
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
     }
 
-    .servappbox .appinfowrap .descrwrap {
-        padding-top: 0;
-        padding-left: 40px;
-    }
+    .servappbox .appinfowrap {
+        align-items: center;
 
-    .servappbox .appinfowrap .descrwrap .descrbox .descrbox__title {
-        font-size: 28px;
+        .imgwrap {
+            max-width: 60%;
+            flex: 0 0 60%;
+        }
+
+        .descrwrap {
+            max-width: 40%;
+            flex: 0 0 40%;
+            padding-left: 48px;
+
+            .descrbox {
+                margin-bottom: 16px;
+
+                .descrbox__title {
+                    font-size: 24px;
+                }
+            }
+        }
     }
 
     .vievallcases {
-        padding: 10px 30px;
-        font-size: 42px;
+        padding: 24px 36px;
+        height: 184px;
+
+        img {
+            max-width: 64px;
+            flex: 0 0 64px;
+        }
+
+        span {
+            max-width: calc(100% - 64px);
+            flex: 0 0 calc(100% - 64px);
+        }
     }
 
-    .servappbox.vertical {
-        height: 847px;
-    }
-
-    .servappbox.vertical {
-        padding: 40px 60px;
-    }
-
-    .shareidea__form .inputfield {
-        margin-bottom: 30px;
-    }
+    // 4 екран (форма)
 
     .shareidea__wrap {
-        padding: 60px 80px;
+        padding: 48px 88px;
+    }
+
+    .shareidea__form {
+        max-width: 585px;
+
+        .title {
+            font-size: 24px;
+        }
     }
 
     .shareidea__wrap .shareideapic1 {
-        width: 180px;
+        width: 187px;
     }
 
     .shareidea__wrap .shareideapic2 {
-        width: 170px;
-    }
-
-    .shareidea__wrap .shareideapic4 {
-        right: 60px;
-        height: calc(100% + 100px);
+        width: 176px;
+        top: -15px;
     }
 
     .shareidea__wrap .shareideapic3 {
-        width: 200px;
-        left: 52%;
+        width: 217px;
+        left: 50%;
     }
 
-    .service-testimonials.ns h3 {
-        font-size: 48px;
+    .shareidea__wrap .shareideapic4 {
+        width: 420px;
+        right: 103px;
     }
 
-    .testimonialslideblock>p {
-        font-size: 18px;
+    .shareidea {
+        padding-bottom: 124px;
     }
+
+    // 5 Testimonials
 
     .testimonialslideblock {
-        padding: 80px 100px 40px;
+        padding: 102px 32px 60px 124px;
     }
 
     .qtop {
-        width: 60px;
-        top: 25px;
-        left: 20px;
+        width: 72px;
+        top: 48px;
+        left: 32px;
     }
 
     .qbot {
-        width: 60px;
-        bottom: 25px;
-        right: 20px;
-    }
-
-    .testimonialslideblock__bottsect .testimonialslideblock__user img {
-        max-width: 60px;
-        flex: 0 0 60px;
-        height: 60px;
-    }
-
-    .testimonialslideblock__bottsect .testimonialslideblock__user .testimonialslideblock__userdescr {
-        max-width: calc(100% - 60px);
-        flex: 0 0 calc(100% - 60px);
-    }
-
-    .testimonialslideblock__bottsect .testimonialslideblock__user .testimonialslideblock__userdescr p,
-    .testimonialslideblock__bottsect .testimonialslideblock__rating span {
-        font-size: 18px;
-    }
-
-    .testimonialslideblock__bottsect .testimonialslideblock__rating .stars img {
-        width: 20px;
+        width: 72px;
+        right: 32px;
+        bottom: 48px;
     }
 
     .testimonialslideblock>p {
-        margin-bottom: 30px;
+        font-size: 18px;
+        min-height: 145px;
+    }
+
+    .testimonialslideblock__bottsect .testimonialslideblock__user .testimonialslideblock__userdescr p {
+        font-size: 20px;
+    }
+
+    .testimonialslideblock__bottsect {
+        max-width: calc(100% - 100px);
+    }
+
+    .testimonialslider-new .slick-next.slick-arrow,
+    .testimonialslider-new .slick-prev.slick-arrow {
+        width: 60px;
+        height: 60px;
+    }
+
+    // 6 What we do?
+    .wwd {
+        padding: 24px 0;
+    }
+
+    .wwd__tabs {
+        padding: 64px 64px 64px 90px;
     }
 
     .wwd__tabs .wwd__tablinks ol li {
-        font-size: 21px;
-        margin-bottom: 25px;
-    }
-
-    .wwd__tabs .wwd__tabcontents {
-        padding-left: 120px;
+        font-size: 18px;
+        margin-bottom: 24px;
     }
 
     .wwd__tabs .wwd__tabcontents img {
-        max-height: 70px;
-        margin-bottom: 15px;
+        width: 64px;
     }
 
     .wwd__tabs .wwd__tabcontents .title {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .wwd__tabs .wwd__tabcontents .descr {
         font-size: 18px;
     }
 
-    .servtitle,
-    .service-workin.ns h2 {
-        font-size: 48px;
-        margin-bottom: 60px;
+    //    8 Tech stack
+    .servtech {
+        padding: 60px 0 0 0;
     }
 
-    .rdytobecome h3 {
-        font-size: 48px;
-        margin-bottom: 40px;
+    // 9 Industries we work in
+    .service-workin.abus.newmain {
+        padding-top: 126px;
     }
+
+    // 10 baner
 
     .rdytobecome {
-        padding: 100px 0;
+        padding: 48px 0 54px;
+        margin-bottom: 124px;
 
-        .rdytobecome__link {
-            font-size: 24px;
+        h3 {
+            font-size: 56px;
+            margin-bottom: 64px;
         }
     }
 
-    .service__col-6.flex-end .serviceswelcome__right {
-        padding-top: 0;
+    .rdytobecome .rdytobecome__link {
+        font-size: 24px;
     }
 
-    .servwelinfobox {
-        padding: 30px;
+    // 11 faq
+
+
+
+
+
+
+
+
+
+
+
+
+    .servappssect h2,
+    .service-testimonials h2,
+    .service-testimonials h3,
+    .wwd h2,
+    .howweoperate h2,
+    .servtech h2,
+    .service-workin.abus.newmain.ns h2,
+    .service-faq h2 {
+        font-size: 50px;
+        line-height: 140%;
+        margin-bottom: 64px;
     }
 
-    .servwelinfobox .descr {
-        font-size: 14px;
+    .service-testimonials h2,
+    .service-testimonials h3 {
+        margin-bottom: 0 !important;
     }
 
-    .servwelinfobox {
-        height: 185px;
+    .servappssect .section-subtitle,
+    .service-testimonials.ns .section-subtitle,
+    .wwd .section-subtitle,
+    .howweoperate .section-subtitle,
+    .servtech .section-subtitle,
+    .service-faq .section-subtitle {
+        font-size: 20px;
+        margin-bottom: 16px;
     }
-
-    .servwelinfobox.horlong {
-        height: 240px;
-    }
-
-    .servwelinfobox.vertlong {
-        height: 445px;
-    }
-
-
-
-
-
-
-    .servappssect h2 {
-        font-size: 48px;
-        margin-bottom: 60px;
-    }
-
-    .servwelinfobox .title,
-    .servwelinfobox .horlongheader span {
-        font-size: 48px;
-    }
-
-    .serviceswelcome,
-    .hupd-clientfutured.services {
-        padding: 80px 0;
-    }
-
-    .serviceswelcome__left p {
-        font-size: 16px;
-    }
-
-
-
-
 
 }
 
+
 // mc
-@media(max-width:1440.8px) and (min-width:991px) {
+@media(max-width:1440.8px) and (min-width:992px) {
     .mcwrap {
+
+        //    1
         .serviceswelcome__left h1 {
             font-size: 48px;
         }
 
-        .servwelinfobox .horlongheader span,
-        .servwelinfobox .title {
-            font-size: 42px;
+        .serviceswelcome__left a {
+            font-size: 16px;
         }
 
-        .servwelinfobox .descr,
-        .servwelinfobox .horlongheader p {
-            font-size: 16px;
-            line-height: 140%;
+        .servwelinfobox .title {
+            font-size: 36px;
+            margin-bottom: 0;
         }
 
         .servwelinfobox {
-            height: 180px;
+            padding: 16px 10px;
+            height: 125px;
         }
 
         .servwelinfobox.horlong {
-            height: 220px;
-            padding: 15px 25px;
+            height: 189px;
+            padding: 16px 24px 8px 24px;
+            justify-content: center;
+        }
+
+        .servwelinfobox .horlongheader span {
+            font-size: 36px;
+            max-width: 90px;
+        }
+
+        .servwelinfobox .horlongheader p {
+            line-height: 160%;
+        }
+
+        .servwelinfobox.horlong {
+            img {
+                max-width: 100%;
+                max-height: 90px;
+            }
         }
 
         .servwelinfobox.vertlong {
-            height: 420px;
+            height: 331px;
+            padding: 24px;
         }
 
-        .clientfutured__imgs .slick-slide {
-            height: 50px;
+        .serviceswelcome__right>.slinfwrap {
+            max-width: 600px;
         }
 
-
-        .hupd-clientfutured.services .clientfutured__imgs .slick-slide {
-            margin: 0 40px;
+        .serviceswelcome__left {
+            max-width: 540px;
         }
 
+        // 2
         .hupd-clientfutured.services {
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
-        .hupd-clientfutured.services .hupd-clientfutured__left p {
-            font-size: 28px;
+        // 3
+        .servappssect .servappssect__leftcol {
+            max-width: 69%;
+            flex: 0 0 69%;
         }
 
-        .hupd-clientfutured.services .hupd-clientfutured__left {
-            max-width: 320px;
-            flex: 0 0 320px;
+        .servappssect .servappssect__rightcol {
+            max-width: 31%;
+            flex: 0 0 31%;
         }
 
-        .hupd-clientfutured.services .hupd-clientfutured__right {
-            max-width: calc(100% - 320px);
-            flex: 0 0 calc(100% - 320px);
+        .servappbox .title {
+            font-size: 20px;
         }
 
-        .servappssect {
-            padding: 100px 0 200px;
+        .servappbox .appinfowrap .descrwrap .descrbox .descrbox__title {
+            font-size: 20px;
         }
 
         .servappbox {
-            padding: 30px 30px 20px;
-            min-height: 420px;
-
-            .appinfowrap {
-                align-items: center;
-            }
-
-            .title {
-                font-size: 24px;
-                margin-bottom: 20px;
-            }
-
-            .appinfowrap .descrwrap .descrbox .descrbox__title {
-                font-size: 21px;
-            }
-
-            .appinfowrap .descrwrap .descrbox {
-                margin-bottom: 20px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
+            padding: 24px 48px;
+            height: 365px;
         }
 
         .vievallcases {
-            font-size: 28px;
-            height: 140px;
+            height: 149px;
+            font-size: 32px;
+            padding: 24px 45px;
+
+            img {
+                max-width: 48px;
+                flex: 0 0 48px;
+            }
+
+            span {
+                max-width: calc(100% - 48px);
+                flex: 0 0 calc(100% - 48px);
+            }
         }
 
         .servappbox.vertical {
-            height: 700px;
+            height: 580px;
+            padding: 32px 48px;
         }
 
-        .servappbox .appinfowrap .descrwrap .descrbox p {
-            font-size: 14px;
+        .servappbox .appinfowrap .imgwrap img {
+            max-height: 207px;
+            width: auto;
         }
 
-        .shareidea__wrap {
-            padding: 40px 50px;
+        .shareidea__wrap .shareideapic1 {
+            width: 146px;
+            left: -50px;
+            top: -40px;
         }
 
         .shareidea__wrap .shareideapic2 {
             width: 130px;
-        }
-
-        .shareidea__wrap .shareideapic3 {
-            width: 160px;
-        }
-
-        .shareidea__wrap .shareideapic1 {
-            width: 140px;
-            left: -60px;
-            top: -80px;
+            right: -25px;
+            top: -25px;
         }
 
         .shareidea__wrap .shareideapic4 {
-            height: calc(100% + 60px);
+            width: 348px;
+            right: 43px;
+        }
+
+        .shareidea__wrap .shareideapic3 {
+            width: 188px;
+            bottom: -60px;
+            left: 59%;
+        }
+
+        .shareidea__form {
+            max-width: 528px;
+        }
+
+        .servappssect {
+            padding-bottom: 170px;
         }
 
         .shareidea {
             padding-bottom: 100px;
         }
 
-        .service-testimonials .servtestim__header {
-            margin-bottom: 60px;
+        .testimonialslideblock {
+            padding: 74px 77px 50px 77px;
+        }
+
+        .qtop {
+            width: 43px;
+            top: 36px;
+            left: 24px;
+        }
+
+        .qbot {
+            width: 43px;
+            right: 24px;
+            bottom: 36px;
         }
 
         .testimonialslideblock>p {
             font-size: 16px;
+            min-height: 120px;
+            line-height: 180%;
         }
 
-        .testimonialslideblock {
-            padding: 60px 80px 30px;
+        .testimonialslideblock__bottsect .testimonialslideblock__user img {
+            max-width: 48px;
+            flex: 0 0 48px;
+            height: 48px;
         }
 
-        .qtop,
-        .qbot {
-            width: 45px;
-        }
-
-        .testimonialslideblock>p {
-            min-height: 128px;
-            margin-bottom: 40px;
+        .testimonialslideblock__bottsect .testimonialslideblock__user .testimonialslideblock__userdescr {
+            max-width: calc(100% - 48px);
+            flex: 0 0 calc(100% - 48px);
         }
 
         .testimonialslideblock__bottsect .testimonialslideblock__user .testimonialslideblock__userdescr p {
             font-size: 16px;
         }
 
-        .servtitle {
-            margin-bottom: 40px;
+        .testimonialslideblock__bottsect .testimonialslideblock__rating span {
+            font-size: 16px;
         }
 
-        .wwd__tabs .wwd__tablinks ol li {
-            font-size: 18px;
-        }
-
-
-        .wwd__tabs {
-            padding: 60px 80px;
+        .testimonialslideblock__bottsect {
+            max-width: calc(100% - 40px);
         }
 
         .wwd__tabs .wwd__tabcontents .descr {
             font-size: 16px;
         }
 
-        .wwd__tabs .wwd__tabcontents .title {
-            font-size: 21px;
-            margin-bottom: 20px;
+        .wwd__tabs .wwd__tabcontents {
+            padding-left: 70px;
         }
 
-        .wwd__tabs .wwd__tabcontents img {
-            max-height: 50px;
-            margin-bottom: 10px;
+        .wwd__tablinks {
+            padding-right: 50px;
+        }
+
+        .operateslide {
+            padding: 24px;
+        }
+
+        .operateslide .title {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .operateslide .descr {
+            font-size: 14px;
         }
 
         .techrow .techrow__line .title {
-            font-size: 21px;
-            font-weight: 600;
+            font-size: 20px;
         }
 
         .techrow {
-            height: 60px;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
+        }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
+        .techrow {
+            height: 70px;
         }
 
         .service-workin.abus.newmain {
             padding-top: 100px;
         }
 
+        .rdytobecome h3 {
+            font-size: 48px;
+        }
+
         .rdytobecome {
-            margin-bottom: 100px;
-        }
-
-        .service-faq {
-            padding: 80px 0;
+            padding: 36px 0 42px;
+            margin-bottom: 124px;
         }
 
 
@@ -1721,167 +1912,60 @@
 
 
 
-
-        .service-workin.ns h2 {
-            margin-bottom: 40px;
-        }
-
+        .howweoperate h2,
         .servappssect h2,
-        .service-testimonials.ns h3,
-        .servtitle,
-        .service-workin.ns h2,
-        .rdytobecome h3,
-        .service-faq h2 {
-            font-size: 42px;
-        }
-
-        .serviceswelcome {
-            padding: 70px 0;
+        .service-faq h2,
+        .service-testimonials h2,
+        .service-testimonials h3,
+        .service-workin.abus.newmain.ns h2,
+        .servtech h2,
+        .wwd h2 {
+            font-size: 40px;
+            margin-bottom: 48px;
         }
 
     }
 
 }
-
-
-
-@media(max-width:1400.8px) {
-
-    .slinfwrap .slinf,
-    .slinfwrap .srinf {
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
-
-    .servwelinfobox.vertlong {
-        height: 240px;
-        padding: 20px;
-        margin-bottom: 16px;
-    }
-
-    .servwelinfobox.vertlong img {
-        max-width: 90px;
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
-
-    .servwelinfobox {
-        padding: 20px;
-    }
-
-    .servwelinfobox {
-        height: 180px;
-    }
-
-    .hupd-clientfutured.services .hupd-clientfutured__left p {
-        font-size: 28px;
-    }
-
-    .hupd-clientfutured.services .hupd-clientfutured__left {
-        max-width: 350px;
-        flex: 0 0 350px;
-    }
-
-    .hupd-clientfutured.services .hupd-clientfutured__right {
-        max-width: calc(100% - 350px);
-        flex: 0 0 calc(100% - 350px);
-    }
-
-    .hupd-clientfutured.services .clientfutured__imgs .slick-slide img {
-        max-height: 70px;
-    }
-
-    .hupd-clientfutured.services .clientfutured__imgs .slick-slide {
-        margin: 0 50px;
-    }
-
-    .vievallcases img {
-        max-width: 60px;
-        flex: 0 0 60px;
-    }
-
-    .vievallcases span {
-        max-width: calc(100% - 60px);
-        flex: 0 0 calc(100% - 60px);
-    }
-
-    .vievallcases {
-        font-size: 32px;
-    }
-
-    .servappbox.vertical {
-        padding: 40px 20px;
-    }
-
-    .shareidea__form {
-        max-width: 500px;
-    }
-
-    .shareidea__wrap .shareideapic4 {
-        right: 40px;
-    }
-
-
-    .mcwrap .servwelinfobox .descr br {
-        display: none;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
 
 
 // mc
-@media(max-width:1400.8px) and (min-width:991px) {
+@media(max-width:1400.8px) and (min-width:992px) {
     .mcwrap {
 
-        .servwelinfobox.vertlong {
-            height: 190px;
-            padding: 15px;
-        }
 
-        .servwelinfobox {
-            height: 120px;
-        }
+
+
+
+
 
         .servwelinfobox.vertlong img {
-            max-width: 80px;
-            margin-bottom: 0;
+            max-width: 100%;
         }
-
-        .hupd-clientfutured.services .clientfutured__imgs .slick-slide img {
-            max-height: 50px;
-        }
-
-
-
-
-
-
-
-
 
         .servwelinfobox .title {
-            font-size: 38px;
+            font-size: 30px;
         }
+
+        .servwelinfobox .descr {
+            font-size: 12px;
+        }
+
+        .shareidea__wrap .shareideapic4 {
+            right: 0;
+            width: 300px;
+        }
+
+        .shareidea {
+            padding-bottom: 60px;
+        }
+
 
     }
 }
 
 // mc
-@media(max-width:1300.8px) and (min-width:991px) {
+@media(max-width:1300.8px) and (min-width:992px) {
     .mcwrap .servappbox .appinfowrap .descrwrap .descrbox p {
         font-size: 13px;
     }
@@ -1899,10 +1983,54 @@
         margin-bottom: 30px;
     }
 
+    .mcwrap .servwelinfobox.vertlong {
+        height: 190px;
+        padding: 15px;
+    }
+
+    .servwelinfobox {
+        height: 120px;
+    }
+
+    .servwelinfobox.vertlong img {
+        max-width: 80px;
+        margin-bottom: 0;
+    }
+
+    .hupd-clientfutured.services .clientfutured__imgs .slick-slide img {
+        max-height: 50px;
+    }
+
+    .slinfwrap .slinf,
+    .slinfwrap .srinf {
+        max-width: 100%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+
+    .servwelinfobox.vertlong {
+        margin-bottom: 16px;
+    }
+
+    .mcwrap .servwelinfobox.vertlong img {
+        max-width: 80px;
+        margin-bottom: 0;
+    }
+
+    .serviceswelcome.lightblue .servwelinfobox.horlong {
+        display: block;
+    }
+
+    .mcwrap .servwelinfobox.horlong img {
+        max-height: 110px;
+    }
+
+
+
+
 
 }
-
-
 
 @media(max-width:1199.8px) {
     // .serviceswelcome .service__col-6 {
@@ -1979,7 +2107,7 @@
 }
 
 // mc
-@media(max-width:1199.8px) and (min-width:991px) {
+@media(max-width:1199.8px) and (min-width:992px) {
     .mcwrap {
 
         .serviceswelcome__left h1 {
@@ -2070,6 +2198,9 @@
             padding-left: 40px;
         }
 
+        .servappbox {
+            height: auto;
+        }
 
 
 
@@ -2201,11 +2332,18 @@
         padding-right: 15px;
     }
 
+    .mcwrap .serviceswelcome__left,
+    .serviceswelcome__left p {
+        max-width: 100%;
+    }
 
+    .mcwrap .serviceswelcome__right {
+        text-align: center;
+    }
 
-
-
-
+    .servwelinfobox .title {
+        font-size: 40px;
+    }
 
 
 
@@ -2221,7 +2359,6 @@
 
 
 }
-
 
 @media(max-width:991.8px) {
 
@@ -2439,9 +2576,13 @@
         }
     }
 
+    .serviceswelcome {
+        padding-bottom: 80px;
+    }
 
-
-
+    .servappbox {
+        height: auto;
+    }
 
 
 
@@ -2455,7 +2596,7 @@
 
     .mcwrap .servwelinfobox .descr,
     .mcwrap .servwelinfobox .horlongheader p {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .servappssect h2,
@@ -2464,6 +2605,47 @@
     .servtitle {
         font-size: 38px;
     }
+
+    .howweoperate h2,
+    .servappssect h2,
+    .service-faq h2,
+    .service-testimonials h2,
+    .service-testimonials h3,
+    .service-workin.abus.newmain.ns h2,
+    .servtech h2,
+    .wwd h2 {
+        font-size: 38px;
+    }
+
+    h2 br {
+        display: none;
+    }
+}
+
+@media(max-width:767.8px) {
+
+    .slinfwrap .slinf,
+    .slinfwrap .srinf {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .servwelinfobox.vertlong {
+        margin-bottom: 16px;
+        height: 320px;
+    }
+
+    .servwelinfobox.vertlong img {
+        max-height: 130px;
+    }
+
+    .shareidea__wrap {
+        padding: 30px 40px 0 40px;
+    }
+
+
+
+
 }
 
 @media(max-width:575.8px) {
@@ -3068,9 +3250,9 @@
     }
 
     .operateslide .operateslide__img {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 15px;
+        width: 78px;
+        height: 78px;
+        margin-bottom: 24px;
 
         img {
             max-width: 50px;
@@ -3177,8 +3359,6 @@
     .servwelinfobox.horlong {
         padding: 24px;
     }
-    
-
 
 }
 
@@ -3268,10 +3448,6 @@
         box-shadow: 0px 4px 13px rgba(67, 253, 130, 0.25), 0px 16px 30px #2f463a;
     }
 
-
-
-
-
 }
 
 @media(max-width:991.8px) {
@@ -3310,4 +3486,132 @@
     .servwelinfobox .descr {
         line-height: 160%;
     }
+
+    .mcwrap .servwelinfobox .horlongheader p,
+    .slinfwrap .slinfwrap.mobshow .servwelinfobox .descr {
+        font-size: 14px;
+    }
+
+    .servwelinfobox.vertlong .title {
+        font-size: 40px;
+    }
+
+    .shareidea__form .title br {
+        display: none;
+    }
+
+    .qtop {
+        width: 60px;
+    }
+
+    .qbot {
+        width: 60px;
+        float: right;
+    }
+
+    .testimonialslideblock__bottsect {
+        max-width: 100%;
+        clear: both;
+        padding-top: 40px;
+    }
+
+    .testimonialslideblock__bottsect .testimonialslideblock__user img {
+        max-width: 64px;
+        flex: 0 0 64px;
+        height: 64px;
+    }
+
+    .testimonialslideblock__bottsect .testimonialslideblock__user .testimonialslideblock__userdescr {
+        width: 100%;
+        max-width: calc(100% - 64px);
+        flex: 0 0 calc(100% - 64px);
+
+    }
+
+    .howweoperate .section-subtitle,
+    .servappssect .section-subtitle,
+    .service-faq .section-subtitle,
+    .service-testimonials.ns .section-subtitle,
+    .servtech .section-subtitle,
+    .wwd .section-subtitle {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .howweoperate h2,
+    .servappssect h2,
+    .service-faq h2,
+    .service-testimonials h2,
+    .service-testimonials h3,
+    .service-workin.abus.newmain.ns h2,
+    .servtech h2,
+    .wwd h2 {
+        font-size: 24px;
+    }
+
+    .service-workin.abus.newmain {
+        padding-top: 60px;
+    }
+
+    .shareidea__form .inputfield {
+        margin-bottom: 36px;
+    }
+
+    .howweoperate h2, .servappssect h2, .service-faq h2, .service-testimonials h2, .service-testimonials h3, .service-workin.abus.newmain.ns h2, .servtech h2, .wwd h2 {
+        margin-bottom: 48px;
+    }
+
+    .howweoperate {
+        padding-top: 60px;
+    }
+
+    .serviceswelcome__right>.slinfwrap {
+        max-width: inherit;
+    }
+
+    .mcwrap .serviceswelcome__right {
+        text-align: left;
+    }
+
+    .serviceswelcome__right>.slinfwrap {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .serviceswelcome__right {
+        .slinfwrap {
+            margin: 0;
+        }
+    
+        .slinfwrap .slinf {
+            padding: 0;
+        }
+    
+        .slinfwrap .slinfwrap.mobshow {
+            padding: 0;
+        }
+    
+        .slinfwrap .col-12 {
+            padding: 0;
+        }
+    
+       
+
+       
+    }
+
+    .serviceswelcome__right .slinfwrap .slinf {
+        padding-right: 8px;
+    }
+
+    .serviceswelcome__right .slinfwrap .slinfwrap.mobshow {
+        padding-left: 8px;
+    }
+
+    .slinfwrap .srinf {
+        padding: 0;
+    }
+    
+  
 }
