@@ -1992,91 +1992,30 @@
         p {
             background-position: 100%;
         }
+
+        .bnrbox__img {
+            img {
+                transform: rotate(-30deg) scale(1.25);
+            }
+        }
     }
 
     .bnrbox__img {
         width: 100%;
         max-width: calc(100% - 517px);
         flex: 0 0 calc(100% - 517px);
-        text-align: center;
+        text-align: right;
 
         img {
             max-width: initial;
             transition: 0.5s;
-        }
-    }
-}
-
-.rotate_v1 {
-    .bnrbox__img {
-        img {
-            transform: rotate(21deg);
-            width: 300px;
-        }
-    }
-
-    &:hover {
-        .bnrbox__img {
-            img {
-                transform: rotate(-46deg) scale(1.2);
-            }
-        }
-    }
-}
-
-.rotate_v2 {
-    .bnrbox__img {
-        img {
-            transform: rotate(-4deg);
-            width: 270px;
-            margin-top: 10px;
-        }
-    }
-
-    &:hover {
-        .bnrbox__img {
-            img {
-                transform: rotate(-20deg) scale(1.1);
-            }
-        }
-    }
-}
-
-.rotate_v3 {
-    .bnrbox__img {
-        img {
             transform: rotate(0deg);
-            width: 290px;
-            margin-top: 10px;
-        }
-    }
-
-    &:hover {
-        .bnrbox__img {
-            img {
-                transform: rotate(-50deg) scale(1.2);
-            }
+            width: 240px;
         }
     }
 }
 
-.rotate_v4 {
-    .bnrbox__img {
-        img {
-            transform: rotate(0deg);
-            width: 290px;
-            margin-top: 10px;
-        }
-    }
 
-    &:hover {
-        .bnrbox__img {
-            img {
-                transform: rotate(44deg) scale(1.2);
-            }
-        }
-    }
-}
 
 @media(max-width:1700.8px) {
     .bnrbox p {
@@ -2088,27 +2027,16 @@
     .bnrbox .bnrbox__img {
         max-width: calc(100% - 450px);
         flex: 0 0 calc(100% - 450px);
+
+        img {
+            width: 180px;
+        }
     }
 
     .bnrbox {
         height: 180px;
     }
-
-    .rotate_v1 .bnrbox__img img {
-        width: 230px;
-    }
-
-    .rotate_v2 .bnrbox__img img {
-        width: 240px;
-    }
-
-    .rotate_v3 .bnrbox__img img {
-        width: 230px;
-    }
-
-    .rotate_v4 .bnrbox__img img {
-        width: 230px;
-    }
+   
 }
 
 @media(max-width:1600.8px) {
@@ -2127,21 +2055,7 @@
         height: 160px;
     }
 
-    .rotate_v1 .bnrbox__img img {
-        width: 230px;
-    }
-
-    .rotate_v2 .bnrbox__img img {
-        width: 240px;
-    }
-
-    .rotate_v3 .bnrbox__img img {
-        width: 230px;
-    }
-
-    .rotate_v4 .bnrbox__img img {
-        width: 230px;
-    }
+   
 }
 
 @media(max-width:1440.8px) {
@@ -2176,7 +2090,7 @@
 
 @media(max-width:767.8px) {
     .bnrbox {
-        height: 400px;
+        height: 480px;
         display: block;
         padding: 24px;
         position: relative;
@@ -2202,28 +2116,8 @@
 
     }
 
-    .rotate_v1 .bnrbox__img img {
-        width: 300px;
-        bottom: -50px;
-        position: relative;
-    }
-
-    .rotate_v2 .bnrbox__img img {
-        width: 280px;
-        bottom: -50px;
-        position: relative;
-    }
-
-    .rotate_v3 .bnrbox__img img {
-        width: 280px;
-        bottom: -50px;
-        position: relative;
-    }
-
-    .rotate_v4 .bnrbox__img img {
-        width: 280px;
-        bottom: -50px;
-        position: relative;
+    .bnrbox .bnrbox__img img {
+        width: 260px;
     }
 
 }
@@ -2234,34 +2128,21 @@
         background: url(../images/new/background-bnrmob.png) no-repeat center/cover;
     }
 
-    .rotate_v1 .bnrbox__img img {
-        width: 100%;
-        bottom: -40px;
+    .bnrbox p {
         position: relative;
-    }
-
-    .rotate_v2 .bnrbox__img img {
-        width: 100%;
-        transform: rotate(-35deg);
-        bottom: -100px;
-        position: relative;
-    }
-
-    .rotate_v3 .bnrbox__img img {
-        width: 100%;
-        bottom: -90px;
-    }
-
-    .rotate_v4 .bnrbox__img img {
-        width: 100%;
-    }
-
-    .rotate_v4:hover .bnrbox__img img {
-        transform: rotate(38deg) scale(1);
+        z-index: 2;
     }
 
     .bnrbox p br {
         display: none;
+    }
+
+    .bnrbox:hover .bnrbox__img img {
+        transform: rotate(0deg) scale(1);
+    }
+
+    .bnrbox .bnrbox__img img {
+        width: 240px;
     }
 
 
