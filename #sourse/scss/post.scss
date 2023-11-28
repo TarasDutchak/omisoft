@@ -428,10 +428,10 @@
 }
 
 .sbbox {
-    width: 217px;
+    width: 252px;
     display: inline-block;
     background: #F1F1F1;
-    padding: 35px 26px 30px 26px;
+    padding: 24px;
     text-align: left;
 
 
@@ -440,16 +440,15 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 150%;
-        margin-bottom: 16px;
+        margin-bottom: 48px;
     }
 
     a {
-        max-width: 135px;
         width: 100%;
         min-height: 52px;
         background: linear-gradient(125.34deg, #CDFF7C 14.35%, #8CFFAC 54.63%, #93FFEB 101.27%);
         color: #0F0F10;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.281px;
         font-weight: 700;
         font-size: 14.04px;
         line-height: 130%;
@@ -708,8 +707,8 @@
     }
 
     .postmiansectbody .postmiansectbody__post {
-        max-width: calc(100% - 400px);
-        flex: 0 0 calc(100% - 400px);
+        max-width: calc(100% - 500px);
+        flex: 0 0 calc(100% - 500px);
     }
 
     .sbbox {
@@ -768,8 +767,6 @@
         margin-bottom: 20px;
     }
 
-
-
     .postreadreview .descr p {
         font-size: 18px;
     }
@@ -781,7 +778,6 @@
     .postnav {
         padding-left: 30px;
     }
-
 
 
 
@@ -1470,8 +1466,9 @@
 }
 
 .postnav {
-    width: 217px;
+    width: 252px;
     display: inline-block;
+    padding-left: 0;
 
     p {
         margin-bottom: 15px;
@@ -1493,48 +1490,72 @@
         &::after {
             content: '';
             display: inline-block;
-            width: 2px;
+            width: 3px;
             height: 100%;
-            background: #E7EAEC;
+            background: #F6F6F6;
             position: absolute;
-            left: -22px;
+            left: 0;
             top: 0;
         }
 
 
         li {
-            margin-bottom: 15px;
+            margin-bottom: 2px;
 
             &:last-child {
                 margin-bottom: 0;
             }
 
             a {
-                color: rgba(15, 15, 16, 0.7);
-                font-weight: 500;
+                color: #4B4B4B;
+                font-weight: 600;
                 font-size: 12px;
                 line-height: 150%;
-                transition: 0.3s;
                 position: relative;
+                padding: 8px 0 8px 19px;
+                display: block;
 
                 &.active {
                     color: #0F0F10;
-                    font-weight: 600;
+                    font-weight: 700;
 
                     &::after {
                         content: '';
-                        width: 2px;
+                        width: 3px;
                         height: 100%;
                         position: absolute;
-                        left: -22px;
+                        left: 0;
                         top: 0;
                         background: #0F0F10;
                         z-index: 2;
                     }
+
+                    &:hover {
+                        color: #fff;
+                    }
                 }
 
                 &:hover {
-                    color: #0F0F10;
+                    color: #fff;
+                    font-weight: 700;
+                    background: #333334;
+                }
+
+                &:focus, &:active {
+                    color: #fff;
+                    font-weight: 700;
+                    background: #333334;
+
+                    &::after {
+                        content: '';
+                        width: 3px;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: 2;
+                        background: linear-gradient(125.34deg,#CDFF7C 14.35%,#8CFFAC 54.63%,#93FFEB 101.27%);
+                    }
                 }
             }
         }
@@ -1639,13 +1660,7 @@
         height: calc(100% - 40px);
     }
 
-    .postnav ul:after {
-        left: -10px;
-    }
-
-    .postnav ul li a.active::after {
-        left: -10px;
-    }
+   
 
 }
 
@@ -2073,6 +2088,16 @@
     .bnrbox .bnrbox__img {
         text-align: right;
     }
+}
+
+@media(max-width:1400.8px) {
+    .postnav {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+   
+
 }
 
 @media(max-width:991.8px) {
