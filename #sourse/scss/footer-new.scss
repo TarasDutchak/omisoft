@@ -193,7 +193,31 @@ footer.footer.new .footer__box+.footer__box {
 
 }
 
+.foolterlink {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 114%;
+    display: block;
+    padding-right: 30px;
+    position: relative;
+    transition: 0.3s;
 
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url('../images/author/linkarrow.svg') no-repeat center / 100%;
+        position: absolute;
+        right: 0;
+        top: -2px;
+    }
+}
 
 
 
