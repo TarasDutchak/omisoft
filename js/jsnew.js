@@ -629,5 +629,58 @@
 
 
 
+
+	// demo live new sections
+	// $('.dlslider').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	prevArrow: $('.dlslider__nav-prev'),
+	// 	nextArrow: $('.dlslider__nav-next')
+	// });
+
+
+	var $status = $('.pagingInfo');
+	var $slickElement = $('.dlslider');
+
+	$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+		//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+		var i = (currentSlide ? currentSlide : 0) + 1;
+		$status.text(i + '\\' + slick.slideCount);
+	});
+
+	$slickElement.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: $('.dlslider__nav-prev'),
+		nextArrow: $('.dlslider__nav-next'),
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					adaptiveHeight: true
+				}
+			},
+			
+
+		]
+	});
+
+	// baner
+	$('.bnrslider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		// autoplay: true,
+		// autoplaySpeed: 5000,
+		// speed: 600,
+
+		
+	});
+
+	
+
+
+
 }(jQuery));
 
