@@ -523,6 +523,30 @@ main.pt0 {
     }
 }
 
+
+.contactsection .sheduleacall .imgwrap {
+    width: 140px;
+    height: 140px;
+}
+
+.contactsection .sheduleacall .name {
+    text-align: left;
+}
+
+.contactsection .sheduleacall .position {
+    text-align: left;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.contactsection .sheduleacall .descr {
+    text-align: left;
+    color: #D8D8D8;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 32px;
+}
+
 @media(max-width:1600.8px) {
 
     .contactsection .contactsection__left h1 {
@@ -568,8 +592,14 @@ main.pt0 {
         padding-top: 170px;
     }
 
+    .contactsection .sheduleacall .imgwrap {
+        width: 90px;
+        height: 90px;
+    }
 
-
+    .contactsection .sheduleacall .descr {
+        font-size: 14px;
+    }
 
 }
 
@@ -639,8 +669,7 @@ main.pt0 {
     }
 
     .contactsection .sheduleacall .position {
-        min-height: 42px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 
