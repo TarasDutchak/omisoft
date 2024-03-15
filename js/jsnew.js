@@ -435,21 +435,21 @@
 
 
 	//   tabs map
-	$('.tabbtn').click(function (e) {
+	$('.maptabs .tabbtnt').click(function (e) {
 		e.preventDefault();
-		$('.tabbtn').removeClass('active');
+		$('.maptabs .tabbtnt').removeClass('active');
 		$(this).addClass('active');
 
 		var tabId = $(this).data('tab');
-		$('.tabcontent').removeClass('show');
+		$('.maptabs .tabcontent').removeClass('show');
 		$('#' + tabId).addClass('show');
 	});
 
-	$('.maptabs .tabbtn').click(function (e) {
+	$('.maptabs .tabbtnt').click(function (e) {
 		e.preventDefault();
 
 		var cId = $(this).data('country');
-		$('.svgcountry').removeClass('active');
+		$('.maptabs .svgcountry').removeClass('active');
 		$('#' + cId).addClass('active');
 	});
 
