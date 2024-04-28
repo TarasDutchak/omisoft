@@ -141,24 +141,7 @@
 		}
 	);
 
-	if ($(window).width() < 1025) {
-		$('.sublink span').click(
-			function () {
-				$(this).parents('li').find('.submenu').toggle();
-			}
-		);
-	}
 
-	$('.header__burger').click(
-		function () {
-			$('header.header').toggleClass('header__blackcolor');
-			$('.header__message').toggle();
-			$(window).scrollTop(0);
-			$('body').toggleClass('noscroll')
-			$(this).toggleClass('open');
-			$('.header.header .header__nav').toggleClass('show');
-		}
-	);
 
 	$('.testimonialslider').slick({
 		slidesToShow: 3,
@@ -240,35 +223,6 @@
 		}
 	}
 
-	if ($('.supua').length > 0) {
-		$('header.fixed').addClass('support');
-		$('.progress-container').addClass('support');
-
-		if ($(document).scrollTop() > 1) {
-			$('.supua').addClass('hide');
-			$('header.fixed').removeClass('support');
-			$('.progress-container').removeClass('support');
-		}
-		else {
-			$('.supua').removeClass('hide');
-			$('header.fixed').addClass('support');
-			$('.progress-container').addClass('support');
-		}
-
-		$(window).scroll(function () {
-			if ($(document).scrollTop() > 1) {
-				$('.supua').addClass('hide');
-				$('header.fixed').removeClass('support');
-				$('.progress-container').removeClass('support');
-			}
-			else {
-				$('.supua').removeClass('hide');
-				$('header.fixed').addClass('support');
-				$('.progress-container').addClass('support');
-			}
-		});
-	}
-
 	// 02.08
 
 	// tabs
@@ -319,38 +273,6 @@
 		});
 
 	});
-
-	$(document).ready(function () {
-		// header header__transparent
-
-	});
-
-	if ($(document).scrollTop() > 1) {
-		$('.header.header__transparent').addClass('headeropacbg')
-	}
-	else {
-		$('.header.header__transparent').removeClass('headeropacbg')
-	}
-
-	$(window).scroll(function () {
-		if ($(document).scrollTop() > 1) {
-			$('.header.header__transparent').addClass('headeropacbg')
-		}
-		else {
-			$('.header.header__transparent').removeClass('headeropacbg')
-		}
-	});
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -465,86 +387,223 @@
 		touchMove: false,
 	});
 
-	// 25.02
-	// if ($(window).width() < 1025) {
-	// 	$('.sublink span').click(
-	// 		function () {
-	// 			$(this).parents('li').find('.submenu').toggle();
-	// 		}
-	// 	);
-	// }
 
 
 
-	const header = document.querySelector('header');
-	const sublink = document.querySelector('.sublink');
-	const megamenu = document.querySelector('.megamenu');
+	// ----------------------------------------header-------------------------------------------------------
 
+	var dropdowns = document.querySelectorAll('.dropdown');
 
-	if (header.classList.contains('header__transparent')) {
-		function addWhiteClass() {
-			if (window.innerWidth >= 992) {
-				header.classList.add('header__white');
-				header.classList.remove('header__transparent');
-			}
-		}
-
-		function removeWhiteClass() {
-			header.classList.remove('header__white');
-			header.classList.add('header__transparent');
-		}
+	function isWideScreen() {
+		return window.innerWidth > 1199;
 	}
-	if (header.classList.contains('header__black')) {
-		function addWhiteClass() {
-			if (window.innerWidth >= 992) {
-				header.classList.add('header__white');
-				header.classList.remove('header__black');
-			}
-		}
 
-		function removeWhiteClass() {
-			header.classList.remove('header__white');
-			header.classList.add('header__black');
+	function addClasses() {
+		// Перевіряємо, чи розширення екрану відповідає умові
+		if (isWideScreen()) {
+			var header = document.querySelector('header'); // Отримуємо елемент <header>
+			if (header) {
+				header.classList.add('white'); // Додаємо клас white для елемента <header>
+			}
+			var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
+			if (megamenu) {
+				megamenu.classList.add('show'); // Додаємо клас show для елемента .megamenu
+			}
 		}
 	}
 
+	function removeClasses() {
+		// Перевіряємо, чи розширення екрану відповідає умові
+		if (isWideScreen()) {
+			var header = document.querySelector('header'); // Отримуємо елемент <header>
+			if (header) {
+				header.classList.remove('white'); // Видаляємо клас white для елемента <header>
+			}
+			var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
+			if (megamenu) {
+				megamenu.classList.remove('show'); // Видаляємо клас show для елемента .megamenu
+			}
+		}
+	}
+
+	function isWideScreenSm() {
+		return window.innerWidth < 1200;
+	}
+
+	if (isWideScreenSm()) {
+		$('.dropdown a').click(function () {
+			$(this).next('.megamenu ').toggleClass('show');
+			$('.headerslider').slick("setPosition", 0);
+		});
+	}
 
 
+	// Додаємо обробник події для кожного елемента dropdown
+	dropdowns.forEach(function (dropdown) {
+		// Додаємо обробники подій для наведення та відведення миші
+		dropdown.addEventListener('mouseenter', addClasses);
+		dropdown.addEventListener('mouseleave', removeClasses);
+	});
+
+	// -----------------------------------------------------------------
 
 
+	function isWideScreenTablet() {
+		return window.innerWidth > 991;
+	}
 
+	if (isWideScreenTablet()) {
+		// Отримуємо всі елементи <a> в блоці .mainlist
+		var links = document.querySelectorAll('.mainlist a');
 
-	if ($('.megamenu').length) {
-		sublink.addEventListener('mouseover', addWhiteClass);
-		sublink.addEventListener('mouseout', removeWhiteClass);
-	
-		megamenu.addEventListener('mouseover', addWhiteClass);
-		megamenu.addEventListener('mouseout', removeWhiteClass);
-	
-	
-		// mob
-		sublink.addEventListener('click', function () {
-			// const megamenu = document.querySelector('.megamenu');
-			if (window.innerWidth <= 991) {
-				megamenu.classList.toggle('show');
+		// Отримуємо всі елементи <ul> в блоці .sidelists
+		var uls = document.querySelectorAll('.sidelists ul');
+
+		// Перевіряємо, чи існує хоча б один <ul>
+		if (uls.length > 0) {
+			// Встановлюємо клас 'show' для першого <ul>
+			uls[0].classList.add('show');
+		}
+
+		// Перевіряємо, чи існує хоча б один <a> в .mainlist
+		if (links.length > 0) {
+			// Додаємо клас 'active' для першого <a>
+			links[0].classList.add('active');
+		}
+
+		// Перебираємо кожен <a> і додаємо обробник подій для кожного кліку
+		links.forEach(function (link, index) {
+			link.addEventListener('click', function () {
+				// Перевіряємо, чи існує <ul> з індексом, який відповідає індексу <a>
+				if (uls[index]) {
+					// Видаляємо клас 'show' у всіх <ul>
+					uls.forEach(function (ul) {
+						ul.classList.remove('show');
+					});
+					// Додаємо клас 'show' тільки відповідному <ul>
+					uls[index].classList.add('show');
+
+					// Видаляємо клас 'active' у всіх <a>
+					links.forEach(function (link) {
+						link.classList.remove('active');
+					});
+					// Додаємо клас 'active' тільки обраному <a>
+					link.classList.add('active');
+				}
+			});
+		});
+	}
+
+	// ----------------------------header slider---------------------------------
+
+	$('.headerslider').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		arrows: false
+	});
+
+	//   header BANER
+
+	if ($('.supua').length > 0) {
+		$('header').addClass('support');
+		$('.progress-container').addClass('support');
+
+		if ($(document).scrollTop() > 1) {
+			$('.supua').addClass('hide');
+			$('header').removeClass('support');
+			$('.progress-container').removeClass('support');
+		}
+		else {
+			$('.supua').removeClass('hide');
+			$('header').addClass('support');
+			$('.progress-container').addClass('support');
+		}
+
+		$(window).scroll(function () {
+			if ($(document).scrollTop() > 1) {
+				$('.supua').addClass('hide');
+				$('header').removeClass('support');
+				$('.progress-container').removeClass('support');
+			}
+			else {
+				$('.supua').removeClass('hide');
+				$('header').addClass('support');
+				$('.progress-container').addClass('support');
 			}
 		});
 	}
 
-	
 
-	
+	if ($(document).scrollTop() > 1) {
+		$('.header').addClass('headeropacbg')
+	}
+	else {
+		$('.header').removeClass('headeropacbg')
+	}
+
+	$(window).scroll(function () {
+		if ($(document).scrollTop() > 1) {
+			$('.header').addClass('headeropacbg')
+		}
+		else {
+			$('.header').removeClass('headeropacbg')
+		}
+	});
+
+	// burger
+
+	$('.header__burger').click(
+		function () {
+			$('header.header').toggleClass('white');
+			// $('.header__message').toggle();
+			// $(window).scrollTop(0);
+			$('body').toggleClass('noscroll')
+			$(this).toggleClass('open');
+			$('.header.header nav').toggleClass('show');
+		}
+	);
+
+	// tablet menu show submenu
+	function isWideScreenMob() {
+		return window.innerWidth < 992;
+	}
+	if (isWideScreenMob()) {
+		$('.tabletmenu>ul>li>a').click(function () {
+			$(this).toggleClass('activetablet');
+			$(this).next('.tablet-submenu').toggle();
+		})
+	}
 
 
+	// -------------FOOTER--------------------
+	$('.footer__dropdown a').click(function (e) {
+		e.preventDefault();
+		$(this).next('ul').toggle();
+	});
 
+	// --
+	$('.footer__showmore').each(function () {
+		var $iconElement = $(this).find('i');
+		var originalText = $iconElement.text().trim();
+		$(this).click(function () {
+			toggleText($iconElement, originalText);
+		});
+	});
 
+	function toggleText($iconElement, originalText) {
+		if ($iconElement.text().trim() === 'Load more') {
+			$iconElement.text('Show less');
+		} else {
+			$iconElement.text('Load more');
+		}
+	}
 
-
-
-
-
-	
-
+	$('.footer__showmore').click(function(){
+		$(this).toggleClass('rotate');
+		$(this).prev('ul').toggleClass('showall');
+	});
 
 
 
