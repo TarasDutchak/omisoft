@@ -658,6 +658,10 @@ header.header {
     display: none;
 }
 
+header.header.white {
+    border-bottom: 1px solid #C9FA3D;
+}
+
 @media(max-width:1600.8px) {
     header.header nav>ul>li {
         margin-right: 26px;
@@ -766,7 +770,108 @@ header.header {
 
 }
 
+@media(max-width:1280.8px) {
+    .header__logo img {
+        max-width: 108px;
+    }
+
+    header.header nav>ul>li>a {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .header.header.white .header__language span {
+        font-size: 14px;
+    }
+
+    header.header .header__language span:after {
+        top: -2px;
+    }
+
+    header.header {
+        height: 86px;
+    }
+
+    header.header nav>ul>li {
+        margin-right: 32px;
+    }
+
+    .header__logo {
+        max-width: 160px;
+        flex: 0 0 160px;
+    }
+
+    header.header nav {
+        max-width: calc(100% - 440px);
+        flex: 0 0 calc(100% - 440px);
+    }
+
+    .megamenu {
+        padding-top: 30px;
+    }
+
+    header.header {
+        .service-container {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    .megamenu__wrapper {
+        padding: 16px 0 32px;
+    }
+
+    .megamenu__wrapper .listscolumn .title {
+        margin-bottom: 22px;
+    }
+
+    .listscolumn .sidelists {
+        padding-left: 60px;
+    }
+
+    .headerslider .slick-dots li button {
+        width: 8px;
+        height: 8px;
+    }
+
+    .headerslider .slick-dots li {
+        margin: 0 2px;
+    }
+
+    .headerslider .slick-slide {
+        padding: 10px;
+    }
+
+    .dealslistscolumn {
+        border-right: none;
+    }
+
+    .dealscolumn .headerdeals .headerdeal{
+        height: 180px;
+    }
+
+    .dealscolumn {
+        max-width: 53%;
+        flex: 0 0 53%;
+    }
+
+    .dealslistscolumn {
+        max-width: 47%;
+        flex: 0 0 47%;
+    }
+
+    .dealscolumn .headerdeals .headerdeal p {
+        font-size: 11px;
+    }
+
+
+}
+
 @media(max-width:1199.8px) {
+
+    header.header.white {
+        border-bottom: none;
+    }
 
     .header__rightbox .headerbtn {
         display: none;
@@ -834,7 +939,7 @@ header.header {
             visibility: visible;
             position: fixed;
             left: 0;
-            top: 96px;
+            top: 86px;
             width: 100%;
             height: calc(100vh - 96px);
             background: #fff;
@@ -874,7 +979,7 @@ header.header {
         display: none;
 
         .service-container {
-            padding: 0;
+            padding: 0 !important;
         }
 
         &.show {
