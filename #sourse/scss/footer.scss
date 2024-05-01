@@ -258,7 +258,7 @@ footer.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 80px;
 
     ul {
         list-style: none;
@@ -321,7 +321,7 @@ footer.footer {
 .footer__lists .footer__list ul li {
     display: none;
 
-    &:nth-child(-n+10) {
+    &:nth-child(-n+6) {
         display: block;
     }
 }
@@ -334,6 +334,10 @@ footer.footer {
     &>ul {
         display: none;
     }
+}
+
+.footerteamsl .slick-slide img {
+    width: 100%;
 }
 
 
