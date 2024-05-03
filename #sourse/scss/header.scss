@@ -513,7 +513,7 @@ header.header {
 
 // WHITE header
 .header.header {
-    &.white {
+    &.white, &.whitedefault {
         background: #fff !important;
 
         nav>ul>li>a {
@@ -658,7 +658,8 @@ header.header {
     display: none;
 }
 
-header.header.white {
+header.header.white,
+header.header.whitedefault {
     border-bottom: 1px solid #C9FA3D;
 }
 
@@ -780,7 +781,8 @@ header.header.white {
         font-weight: 700;
     }
 
-    .header.header.white .header__language span {
+    .header.header.white .header__language span,
+    .header.header.whitedefault .header__language span  {
         font-size: 14px;
     }
 
@@ -869,7 +871,8 @@ header.header.white {
 
 @media(max-width:1199.8px) {
 
-    header.header.white {
+    header.header.white,
+    header.header.whitedefault  {
         border-bottom: none;
     }
 
@@ -951,7 +954,9 @@ header.header.white {
 
     }
 
-    .header.header.white nav.show>ul {
+    .header.header.white nav.show>ul,
+    .header.header.whitedefault nav.show>ul
+     {
         display: block;
         padding: 40px;
 
@@ -1064,20 +1069,25 @@ header.header.white {
         position: absolute;
     }
 
-    header.header.white .header__language .langlist {
+    header.header.white .header__language .langlist,
+    header.header.whitedefault .header__language .langlist
+     {
         z-index: 1;
     }
 
-    .header.header.white nav.show>ul>li {
+    .header.header.white nav.show>ul>li,
+    .header.header.whitedefault nav.show>ul>li {
         margin-bottom: 26px;
     }
 
-    .header.header.white nav.show>ul>li>a {
+    .header.header.white nav.show>ul>li>a,
+    .header.header.whitedefault nav.show>ul>li>a {
         font-size: 26px;
         padding-right: 25px;
     }
 
-    .header.header.white nav.show>ul>li>a svg {
+    .header.header.white nav.show>ul>li>a svg,
+    .header.header.whitedefault nav.show>ul>li>a svg {
         width: 22px;
         height: 22px;
         top: 7px;
@@ -1134,7 +1144,8 @@ header.header.white {
         margin-top: 0;
     }
 
-    .header.header.white nav>ul>li.dropdown>a {
+    .header.header.white nav>ul>li.dropdown>a,
+    .header.header.whitedefault nav>ul>li.dropdown>a  {
         background: none;
         -webkit-text-fill-color: initial;
         color: #141414;
@@ -1395,11 +1406,14 @@ header.header.white {
     }
 
     header.header nav>ul,
-    .header.header.white nav.show>ul {
+    .header.header.white nav.show>ul,
+    .header.header.whitedefault nav.show>ul
+    {
         padding: 40px 16px;
     }
 
-    .header.header.white nav.show>ul>li {
+    .header.header.white nav.show>ul>li,
+    .header.header.whitedefault nav.show>ul>li {
         margin-bottom: 24px;
     }
 
