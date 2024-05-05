@@ -40,19 +40,28 @@ header.header {
                 }
 
                 &.dropdown {
-                    &>a {
+                    &>a, &>span {
                         position: relative;
                         padding-right: 20px;
 
                         svg {
                             position: absolute;
                             right: 0;
-                            top: 2px;
+                            top: 4px;
+                            transition: 0.3s;
+                        }
+
+                        &.rotate {
+                            svg {
+                                transform: rotate(-180deg);
+                            }
                         }
                     }
                 }
 
-                &>a {
+                &>a, &>span {
+                    display: inline-block;
+                    cursor: pointer;
                     color: #fff;
                     font-weight: 700;
                     font-size: 16px;
@@ -99,7 +108,7 @@ header.header {
     color: #C9FA3D;
     font-weight: 700;
     line-height: 120%;
-    border: 1px solid #C9FA3D;
+    border: 0.5px solid #C9FA3D;
     display: inline-block;
     transition: 0.3s;
     padding: 12px 21px;
@@ -190,7 +199,7 @@ header.header {
         width: 100%;
         max-width: 50%;
         flex: 0 0 50%;
-        border-right: 1px solid #C9FA3D;
+        border-right: 0.5px solid #C9FA3D;
 
         ul {
             list-style-type: none;
@@ -268,7 +277,6 @@ header.header {
                     line-height: 180%;
 
                     &:hover {
-                        font-weight: 500;
                         text-decoration: underline;
                         text-underline-offset: 2px;
                     }
@@ -309,7 +317,7 @@ header.header {
     width: 100%;
     max-width: 42%;
     flex: 0 0 42%;
-    border-right: 1px solid #C9FA3D;
+    border-right: 0.5px solid #C9FA3D;
 
     .title {
         margin-bottom: 30px;
@@ -519,14 +527,15 @@ header.header {
     &.whitedefault {
         background: #fff !important;
 
-        nav>ul>li>a {
+        nav>ul>li>a, nav>ul>li>span {
             background: linear-gradient(to right, #212121, #212121 30%, #8CFFAC 40%, #93FFEB 65%, #a1a1a1 65%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 330% 100%;
         }
 
-        nav>ul>li.dropdown>a {
+        nav>ul>li>a,
+        nav>ul>li>span {
             background: linear-gradient(to right, #212121, #212121 30%, #8CFFAC 40%, #93FFEB 65%, #a1a1a1 65%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -558,7 +567,8 @@ header.header {
             }
         }
 
-        nav>ul>li.dropdown>a {
+        nav>ul>li.dropdown>a,
+        nav>ul>li.dropdown>span {
             &>svg {
                 path {
                     stroke: #212121;
@@ -671,7 +681,11 @@ header.header {
 
 header.header.white,
 header.header.whitedefault {
-    border-bottom: 1px solid #C9FA3D;
+    border-bottom: 0.5px solid #C9FA3D;
+}
+
+.slidercolumn {
+    padding-top: 24px;
 }
 
 @media(max-width:1600.8px) {
@@ -716,6 +730,15 @@ header.header.whitedefault {
         height: 220px;
     }
 
+}
+
+@media(max-width:1440.8px) {
+    .megamenu__wrapper {
+        .service-container {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    }
 }
 
 @media(max-width:1400.8px) {
@@ -958,11 +981,11 @@ header.header.whitedefault {
             left: 0;
             top: 86px;
             width: 100%;
-            height: calc(100vh - 96px);
+            height: calc(100vh - 86px);
             background: #fff;
             max-width: initial;
             transform: translateY(0);
-            border-top: 1px solid #C9FA3D;
+            border-top: 0.5px solid #C9FA3D;
         }
 
 
@@ -1068,6 +1091,10 @@ header.header.whitedefault {
         svg path {
             stroke: #0F0F10;
         }
+    }
+
+    .megamenu__wrapper {
+        box-shadow: none;
     }
 
 }

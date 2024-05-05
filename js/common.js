@@ -392,58 +392,117 @@
 
 	// ----------------------------------------header-------------------------------------------------------
 
-	var dropdowns = document.querySelectorAll('.dropdown');
+	// var dropdowns = document.querySelectorAll('.dropdown');
 
-	function isWideScreen() {
-		return window.innerWidth > 1199;
-	}
+	// function isWideScreen() {
+	// 	return window.innerWidth > 1199;
+	// }
 
-	function addClasses() {
-		// Перевіряємо, чи розширення екрану відповідає умові
-		if (isWideScreen()) {
-			var header = document.querySelector('header'); // Отримуємо елемент <header>
-			if (header) {
-				header.classList.add('white'); // Додаємо клас white для елемента <header>
+	// function addClasses() {
+	// 	// Перевіряємо, чи розширення екрану відповідає умові
+	// 	if (isWideScreen()) {
+	// 		var header = document.querySelector('header'); // Отримуємо елемент <header>
+	// 		if (header) {
+	// 			header.classList.add('white'); // Додаємо клас white для елемента <header>
+	// 		}
+	// 		var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
+	// 		if (megamenu) {
+	// 			megamenu.classList.add('show'); // Додаємо клас show для елемента .megamenu
+	// 		}
+	// 	}
+	// }
+
+	// function removeClasses() {
+	// 	// Перевіряємо, чи розширення екрану відповідає умові
+	// 	if (isWideScreen()) {
+	// 		var header = document.querySelector('header'); // Отримуємо елемент <header>
+	// 		if (header) {
+	// 			header.classList.remove('white'); // Видаляємо клас white для елемента <header>
+	// 		}
+	// 		var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
+	// 		if (megamenu) {
+	// 			megamenu.classList.remove('show'); // Видаляємо клас show для елемента .megamenu
+	// 		}
+	// 	}
+	// }
+
+	// function isWideScreenSm() {
+	// 	return window.innerWidth < 1200;
+	// }
+
+	// if (isWideScreenSm()) {
+	// 	$('.dropdown a').click(function () {
+	// 		$(this).next('.megamenu ').toggleClass('show');
+	// 		$('.headerslider').slick("setPosition", 0);
+	// 	});
+	// }
+
+
+	// // Додаємо обробник події для кожного елемента dropdown
+	// dropdowns.forEach(function (dropdown) {
+	// 	// Додаємо обробники подій для наведення та відведення миші
+	// 	dropdown.addEventListener('mouseenter', addClasses);
+	// 	dropdown.addEventListener('mouseleave', removeClasses);
+	// });
+
+
+
+
+
+
+
+
+	// $('.dropdown span').click(function(){
+	// 	$('.dropdown span').not(this).removeClass('rotate');
+	// 	$('.dropdown span').not(this).parent().find('.megamenu').removeClass('show');
+	// 	$('header.header:not(.white)').removeClass('white');
+
+	// 	$(this).toggleClass('rotate');
+	// 	$(this).parent().find('.megamenu').toggleClass('show');
+
+
+
+
+	// });
+
+	$('.dropdown span').click(function () {
+		$('.dropdown span').not(this).removeClass('rotate');
+		$('.dropdown span').not(this).parent().find('.megamenu').removeClass('show');
+
+		var anyMenuOpen = false;
+		$('.dropdown .megamenu').each(function () {
+			if ($(this).hasClass('show')) {
+				anyMenuOpen = true;
+				return false;
 			}
-			var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
-			if (megamenu) {
-				megamenu.classList.add('show'); // Додаємо клас show для елемента .megamenu
-			}
-		}
-	}
-
-	function removeClasses() {
-		// Перевіряємо, чи розширення екрану відповідає умові
-		if (isWideScreen()) {
-			var header = document.querySelector('header'); // Отримуємо елемент <header>
-			if (header) {
-				header.classList.remove('white'); // Видаляємо клас white для елемента <header>
-			}
-			var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
-			if (megamenu) {
-				megamenu.classList.remove('show'); // Видаляємо клас show для елемента .megamenu
-			}
-		}
-	}
-
-	function isWideScreenSm() {
-		return window.innerWidth < 1200;
-	}
-
-	if (isWideScreenSm()) {
-		$('.dropdown a').click(function () {
-			$(this).next('.megamenu ').toggleClass('show');
-			$('.headerslider').slick("setPosition", 0);
 		});
-	}
 
+		if (anyMenuOpen) {
+			$('header.header').removeClass('white');
+		} else {
+			$('header.header').addClass('white');
+		}
 
-	// Додаємо обробник події для кожного елемента dropdown
-	dropdowns.forEach(function (dropdown) {
-		// Додаємо обробники подій для наведення та відведення миші
-		dropdown.addEventListener('mouseenter', addClasses);
-		dropdown.addEventListener('mouseleave', removeClasses);
+		$(this).toggleClass('rotate');
+		$(this).parent().find('.megamenu').toggleClass('show');
 	});
+
+
+	$(document).click(function (event) {
+		let $target = $(event.target);
+		if (!$target.closest('.megamenu').length && !$target.closest('.header').length) {
+			$('header.header').removeClass('white');
+			$('.megamenu').removeClass('show');
+			$('.dropdown span').removeClass('rotate');
+		}
+	});
+
+
+
+
+
+
+
 
 	// -----------------------------------------------------------------
 
@@ -499,9 +558,11 @@
 	$('.headerslider').slick({
 		dots: true,
 		infinite: true,
-		speed: 300,
 		slidesToShow: 1,
-		arrows: false
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		speed: 600,
 	});
 
 	//   header BANER
@@ -578,7 +639,7 @@
 
 
 	// -------------FOOTER--------------------
-	$('.footer__dropdown a').click(function (e) {
+	$('.footer__dropdown>a').click(function (e) {
 		e.preventDefault();
 		$(this).next('ul').toggle();
 	});
@@ -600,11 +661,10 @@
 		}
 	}
 
-	$('.footer__showmore').click(function(){
+	$('.footer__showmore').click(function () {
 		$(this).toggleClass('rotate');
 		$(this).prev('ul').toggleClass('showall');
 	});
-
 
 
 
