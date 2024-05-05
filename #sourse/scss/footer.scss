@@ -135,8 +135,11 @@ footer.footer {
     max-width: 100%;
     flex: 0 0 100%;
     padding-right: 16px;
-    min-height: 346px;
+    margin-bottom: 40px;
+}
 
+.footer__list {
+    min-height: 370px;
 }
 
 .footer__lists,
@@ -178,14 +181,17 @@ footer.footer {
                         margin-bottom: 0;
                     }
 
-                    &>a {
+                    &>a, &>span {
                         font-size: 16px;
                         font-weight: 600;
                         color: #000;
                     }
 
                     &.footer__dropdown {
-                        a {
+                        a, span {
+                            cursor: pointer;
+                            display: inline-block;
+                            
                             svg {
                                 display: inline-block;
                                 vertical-align: middle;
@@ -364,7 +370,7 @@ footer.footer {
 
 @media(max-width:1540.8px) {
     .footer__listsmain .footer__list {
-        min-height: 401px;
+       
     }
 }
 
@@ -374,8 +380,7 @@ footer.footer {
     }
 
     .footer__listsmain .footer__list {
-        min-height: 297px;
-        margin-bottom: 40px;
+      
     }
 
     .footer__lists .footer__list {
@@ -426,7 +431,7 @@ footer.footer {
         flex: 0 0 calc(100% - 270px);
     }
     .footer__listsmain .footer__list {
-        min-height: 296px;
+       
     }
 
 }
