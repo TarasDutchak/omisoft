@@ -387,84 +387,6 @@
 		touchMove: false,
 	});
 
-
-
-
-	// ----------------------------------------header-------------------------------------------------------
-
-	// var dropdowns = document.querySelectorAll('.dropdown');
-
-	// function isWideScreen() {
-	// 	return window.innerWidth > 1199;
-	// }
-
-	// function addClasses() {
-	// 	// Перевіряємо, чи розширення екрану відповідає умові
-	// 	if (isWideScreen()) {
-	// 		var header = document.querySelector('header'); // Отримуємо елемент <header>
-	// 		if (header) {
-	// 			header.classList.add('white'); // Додаємо клас white для елемента <header>
-	// 		}
-	// 		var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
-	// 		if (megamenu) {
-	// 			megamenu.classList.add('show'); // Додаємо клас show для елемента .megamenu
-	// 		}
-	// 	}
-	// }
-
-	// function removeClasses() {
-	// 	// Перевіряємо, чи розширення екрану відповідає умові
-	// 	if (isWideScreen()) {
-	// 		var header = document.querySelector('header'); // Отримуємо елемент <header>
-	// 		if (header) {
-	// 			header.classList.remove('white'); // Видаляємо клас white для елемента <header>
-	// 		}
-	// 		var megamenu = this.querySelector('.megamenu'); // Отримуємо дочірній елемент .megamenu
-	// 		if (megamenu) {
-	// 			megamenu.classList.remove('show'); // Видаляємо клас show для елемента .megamenu
-	// 		}
-	// 	}
-	// }
-
-	// function isWideScreenSm() {
-	// 	return window.innerWidth < 1200;
-	// }
-
-	// if (isWideScreenSm()) {
-	// 	$('.dropdown a').click(function () {
-	// 		$(this).next('.megamenu ').toggleClass('show');
-	// 		$('.headerslider').slick("setPosition", 0);
-	// 	});
-	// }
-
-
-	// // Додаємо обробник події для кожного елемента dropdown
-	// dropdowns.forEach(function (dropdown) {
-	// 	// Додаємо обробники подій для наведення та відведення миші
-	// 	dropdown.addEventListener('mouseenter', addClasses);
-	// 	dropdown.addEventListener('mouseleave', removeClasses);
-	// });
-
-
-
-
-
-
-
-
-	// $('.dropdown span').click(function(){
-	// 	$('.dropdown span').not(this).removeClass('rotate');
-	// 	$('.dropdown span').not(this).parent().find('.megamenu').removeClass('show');
-	// 	$('header.header:not(.white)').removeClass('white');
-
-	// 	$(this).toggleClass('rotate');
-	// 	$(this).parent().find('.megamenu').toggleClass('show');
-
-
-
-
-	// });
-
 	function isWideScreen() {
 		return window.innerWidth > 1199;
 	}
@@ -503,17 +425,6 @@
 		});
 	
 	}
-
-	
-
-
-
-
-
-
-
-	// -----------------------------------------------------------------
-
 
 	function isWideScreenTablet() {
 		return window.innerWidth > 991;
@@ -574,7 +485,6 @@
 	});
 
 	//   header BANER
-
 	if ($('.supua').length > 0) {
 		$('header').addClass('support');
 		$('.progress-container').addClass('support');
@@ -603,7 +513,6 @@
 			}
 		});
 	}
-
 
 	if ($(document).scrollTop() > 1) {
 		$('.header').addClass('headeropacbg')
@@ -636,6 +545,7 @@
 	function isWideScreenMob() {
 		return window.innerWidth < 992;
 	}
+
 	if (isWideScreenMob()) {
 		$('.tabletmenu>ul>li>a').click(function () {
 			$(this).toggleClass('activetablet');
@@ -652,12 +562,11 @@
 			$(this).next('.megamenu').toggleClass('show');
 			$('.headerslider').slick("setPosition", 0);
 		});
-		
 	}
 
-
 	// -------------FOOTER--------------------
-	$('.footer__dropdown>a').click(function (e) {
+	$('.footer__dropdown>span').click(function (e) {
+		$(this).toggleClass('active');
 		e.preventDefault();
 		$(this).next('ul').toggle();
 	});
