@@ -333,7 +333,7 @@ header.header {
     border-right: 0.5px solid #C9FA3D;
 
     .title {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
         font-size: 14px;
         color: #141414;
     }
@@ -706,6 +706,10 @@ header.header.whitedefault {
 
 .slidercolumn {
     padding-top: 10px;
+}
+
+.dealslistscolumn ul li a {
+    line-height: 145%;
 }
 
 @media(max-width:1600.8px) {
