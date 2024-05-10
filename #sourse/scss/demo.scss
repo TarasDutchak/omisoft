@@ -1675,8 +1675,8 @@
     }
 
     .benefitbox {
-       height: 180px;
-       padding: 10px;
+        height: 180px;
+        padding: 10px;
     }
 
     .benefitbox .title {
@@ -1696,6 +1696,32 @@
         padding: 30px 0;
     }
 }
+
+
+// BANERS
+.bnrssection {
+    padding: 64px 0;
+}
+
+.bnrsbox {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1492px;
+    border-radius: 29px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.bnrbg {
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+}
+
+
+
 
 
 
