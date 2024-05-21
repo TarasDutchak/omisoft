@@ -349,7 +349,7 @@ header.header {
                 color: #636B7F;
                 font-size: 14px;
                 font-weight: 700;
-                text-transform: uppercase;
+                text-transform: capitalize;
                 transition: 0.3s;
 
                 // &::after {
@@ -398,7 +398,6 @@ header.header {
         text-align: left;
         max-width: 685px;
         display: inline-block;
-        width: 100%;
     }
 
     .title {
