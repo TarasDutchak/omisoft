@@ -1139,7 +1139,21 @@ header.header.whitedefault {
 
 }
 
+@media(max-width:1100.8px) {
+    .headerslider .slick-slide {
+        padding: 0 2px 10px 2px;
+    }
+
+    .megamenu__wrapper .slidercolumn {
+        padding-left: 50px;
+    }
+}
+
 @media(max-width:991.8px) {
+    .megamenu__wrapper .slidercolumn {
+        padding-left: 0;
+    }
+
     .supua {
         font-size: 18px;
 
