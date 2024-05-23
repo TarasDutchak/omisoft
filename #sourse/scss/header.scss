@@ -719,6 +719,13 @@ header.header {
     user-select: none;
 }
 
+body * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 footer.footer * {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -733,6 +740,7 @@ footer.footer * {
     -ms-user-select: text;
     user-select: text;
 }
+
 
 
 @media(max-width:1600.8px) {
