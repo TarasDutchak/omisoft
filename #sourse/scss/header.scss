@@ -712,6 +712,29 @@ header.header.whitedefault {
     line-height: 145%;
 }
 
+header.header {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+footer.footer * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.footer__country a,
+.footer__info .mainemail {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+
 @media(max-width:1600.8px) {
     header.header nav>ul>li {
         margin-right: 26px;
@@ -901,9 +924,9 @@ header.header.whitedefault {
     }
 
     .dealscolumn .headerdeals .headerdeal p {
-       br {
-        display: none;
-       }
+        br {
+            display: none;
+        }
     }
 
     main {
@@ -1366,7 +1389,7 @@ header.header.whitedefault {
     }
 
     .dealscolumn .headerdeals .headerdeal {
-      
+
         img {
             object-position: 50% 0;
         }
