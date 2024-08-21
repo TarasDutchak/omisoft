@@ -568,7 +568,8 @@ header.header {
         }
 
         .header__logo {
-            filter: invert(1);
+            // filter: invert(1);
+            filter: brightness(0);
         }
 
         .headerbtn {
