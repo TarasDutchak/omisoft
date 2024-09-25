@@ -1,0 +1,18 @@
+{
+    "sourceFile": "#sourse/scss/bgupdate.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1727103699927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1727103699927,
+            "name": "Commit-0",
+            "content": "// about-us-new.html\r\n\r\n.aboutusn-whoweare,\r\n.aboutusn-techstack,\r\n.service-workin.aboutusn,\r\n.service-testimonials,\r\n.service-testimonials.aboutusn,\r\n.fqsection {\r\n    background: transparent;\r\n\r\n    &::after, &::before {\r\n        display: none;\r\n    }\r\n}\r\n\r\n.service-welcomesection,\r\n.abuswhoweare,\r\n.abusdev,\r\n.gridbg,\r\n.service-workin,\r\n.service-postbox,\r\n.privacysect,\r\n.service-benefits,\r\n.service-whatwedo,\r\n.service-operate,\r\n.service-ourworks {\r\n    background: transparent !important;\r\n\r\n    &::after {\r\n        display: none;\r\n    }\r\n}\r\n\r\n.service-faq {\r\n    background-image: none;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n.aboutusn-developing {\r\n    background-image: url(../images/homeupdate/without-noise.svg);\r\n    background-repeat: repeat;\r\n\r\n    :after {\r\n        display: none;\r\n    }\r\n}\r\n\r\n// header.header.header__black\r\n//  {\r\n//     background-color: #0A0A0B;\r\n// }\r\n\r\n.errorsection {\r\n    background: #0A0A0B;\r\n}\r\n\r\n.aboutusn-developing:after {\r\n    display: none;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// bodygridbg"
+        }
+    ]
+}
