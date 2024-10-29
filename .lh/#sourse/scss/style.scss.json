@@ -1,0 +1,42 @@
+{
+    "sourceFile": "#sourse/scss/style.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1730216691109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730216711820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n @import \"general\";\r\n @import \"header\";\r\n @import \"megamenu\";\r\n @import \"service\";\r\n+@import \"footer\";\r\n @import \"error\";\r\n \r\n @import \"responsive\";\r\n \r\n"
+                },
+                {
+                    "date": 1730216750363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n @import \"service\";\r\n @import \"footer\";\r\n @import \"error\";\r\n \r\n+\r\n @import \"responsive\";\r\n \r\n @import \"newsect\";\r\n \r\n"
+                },
+                {
+                    "date": 1730217085433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,10 @@\n @import \"general\";\r\n-@import \"header\";\r\n @import \"megamenu\";\r\n @import \"service\";\r\n @import \"footer\";\r\n @import \"error\";\r\n \r\n-\r\n @import \"responsive\";\r\n \r\n @import \"newsect\";\r\n \r\n"
+                },
+                {
+                    "date": 1730217118343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n @import \"faq\";\r\n @import \"aboutus\";\r\n \r\n @import \"lateststories\";\r\n-@import \"mainnew\";\r\n+// @import \"mainnew\";\r\n \r\n @import \"about-new\";\r\n \r\n @import \"bgupdate\";\r\n"
+                },
+                {
+                    "date": 1730217173308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n @import \"faq\";\r\n @import \"aboutus\";\r\n \r\n @import \"lateststories\";\r\n-// @import \"mainnew\";\r\n+@import \"mainnew\";\r\n \r\n @import \"about-new\";\r\n \r\n @import \"bgupdate\";\r\n"
+                },
+                {
+                    "date": 1730217250390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n @import \"faq\";\r\n @import \"aboutus\";\r\n \r\n @import \"lateststories\";\r\n-@import \"mainnew\";\r\n+// @import \"mainnew\";\r\n \r\n @import \"about-new\";\r\n \r\n @import \"bgupdate\";\r\n"
+                }
+            ],
+            "date": 1730216691109,
+            "name": "Commit-0",
+            "content": "@import \"general\";\r\n@import \"header\";\r\n@import \"megamenu\";\r\n@import \"service\";\r\n@import \"error\";\r\n\r\n@import \"responsive\";\r\n\r\n@import \"newsect\";\r\n\r\n@import \"blog\";\r\n@import \"post\";\r\n\r\n@import \"faq\";\r\n@import \"aboutus\";\r\n\r\n@import \"lateststories\";\r\n@import \"mainnew\";\r\n\r\n@import \"about-new\";\r\n\r\n@import \"bgupdate\";\r\n@import \"author\";\r\n\r\n@import \"fix\";"
+        }
+    ]
+}
