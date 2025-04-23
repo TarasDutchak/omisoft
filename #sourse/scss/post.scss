@@ -576,7 +576,7 @@
     height: 1px;
     background: rgba(201, 250, 61, 0.29);
     position: fixed;
-    top: 96px;
+    top: 80px;
     z-index: 13;
 
 }
@@ -953,9 +953,7 @@
         top: 50px;
     }
 
-    .progress-container {
-        top: 96px;
-    }
+  
 }
 
 @media(max-width:575.8px) {
@@ -1150,12 +1148,10 @@
 
 
     .progress-container {
-        top: 80px;
+        top: 70px;
     }
 
-    .progress-container {
-        top: 96px;
-    }
+   
 
 }
 
